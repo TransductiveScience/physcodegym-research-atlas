@@ -1,0 +1,184 @@
+{
+  "verified_at_utc": "2026-11-08T18:37:33.590055+00:00",
+  "status": "pass",
+  "base": "https://physics.transductive.science",
+  "site_pages": 176,
+  "indexed_pages": 176,
+  "sitemap_pages": 176,
+  "internal_links_checked": 4313,
+  "external_links_seen": 1749,
+  "public_samples": 28,
+  "public_samples_passed": 28,
+  "manifest_sha256": "4d5107f5080f29871367ea783b95b37e8b1f17e700254b7b7b1be32ca5b520c7",
+  "errors": [],
+  "public_test_results": [
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_6661928_liquid/",
+      "status": 200,
+      "size": 6926,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r2_garden_hose_jet/",
+      "status": 200,
+      "size": 6979,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_02_l1_0008_roll/",
+      "status": 200,
+      "size": 6935,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physbench_02_L2_0009_marble_run_x_right/",
+      "status": 200,
+      "size": 7425,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_3188895_liquid/",
+      "status": 200,
+      "size": 7122,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/pexels_wind_0007_daisies_in_field/",
+      "status": 200,
+      "size": 7335,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_7777214_rotation/",
+      "status": 200,
+      "size": 7185,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_03_l2_0003_constraint/",
+      "status": 200,
+      "size": 7141,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0166_smiley_ball_rotates/",
+      "status": 200,
+      "size": 7351,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_a00238_track/",
+      "status": 200,
+      "size": 7012,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/newgap_blueberries_bounce_closeup/",
+      "status": 200,
+      "size": 7056,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physbench_03_L2_0038_newtons_cradle_double/",
+      "status": 200,
+      "size": 7324,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/pexels_wind_0003_flag_ukraine_single/",
+      "status": 200,
+      "size": 7165,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/experiments/smartphone-kinematics/",
+      "status": 200,
+      "size": 8546,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_6541467_projectile/",
+      "status": 200,
+      "size": 7435,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_27938940_liquid/",
+      "status": 200,
+      "size": 6955,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r2_iris_pendulum_45deg/",
+      "status": 200,
+      "size": 7051,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/newgap_capsules_fall/",
+      "status": 200,
+      "size": 7056,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_05_l3_0008_cloth/",
+      "status": 200,
+      "size": 6866,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0034_block_domino/",
+      "status": 200,
+      "size": 7391,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_7461479_rotation/",
+      "status": 200,
+      "size": 6979,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_7320537_playground/",
+      "status": 200,
+      "size": 6976,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/newgap_marbles_into_drawer/",
+      "status": 200,
+      "size": 7211,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_04_l3_0006_liquid/",
+      "status": 200,
+      "size": 6941,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/",
+      "status": 200,
+      "size": 8920,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/cases/",
+      "status": 200,
+      "size": 87080,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/analysis/anomaly-atlas/",
+      "status": 200,
+      "size": 11133,
+      "ok": true
+    },
+    {
+      "url": "https://physics.transductive.science/tools/hash-verifier/",
+      "status": 200,
+      "size": 33083,
+      "ok": true
+    }
+  ]
+}
