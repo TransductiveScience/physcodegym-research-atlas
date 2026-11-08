@@ -1,0 +1,813 @@
+{
+  "title": "VMS Mathematical Bridge to SymPy Audit: claim-to-code traceability",
+  "created_at": "2026-11-08T19:44:48.093126+00:00",
+  "source": {
+    "publication": "Mathematical Bridge — Math Appendix",
+    "latex_url": "https://www.vms-institute.org/theory/latex/mathematical-bridge-appendix.tex",
+    "latex_sha256": "ad2762a1c53ae5f6d8104408e410c0d5ec82744304151f735d2a0181ba37dd2a",
+    "pdf_url": "https://www.vms-institute.org/theory/pdf/Mathematical%20Bridge%20-%20Math%20Appendix.pdf",
+    "pdf_sha256": "e877adc928009929aba1a420cb75cf7300ca949f1608f28bfa66580c606f9400",
+    "audit_zip_url": "https://www.vms-institute.org/audit/vms-sympy-audit.zip",
+    "audit_zip_sha256": "42ff1df323780157baa374996f7f69f3fddbdd9a8348d3fcb4edd90dca393737"
+  },
+  "method": {
+    "classification": "Human-guided claim interpretation cross-checked with AST and complete 32-file source inspection",
+    "confidence": "Bounded to specified original Math Appendix claims and the named SymPy ZIP, not all VMS publications or unpublished tests",
+    "meaning_of_matched": "A module tests a mathematical object or law analogous/related to a source claim; it does not alone prove emergence from the primitive VMS postulates.",
+    "meaning_of_unverified": "The declared VMS-specific derivational step was not implemented as a tested proposition in this ZIP. It may appear elsewhere in publications.",
+    "direct_complete_derivations_identified": 0,
+    "challenge_counterexample_disclosed": false
+  },
+  "counts": {
+    "bridge_claim_groups": 9,
+    "audit_modules": 32,
+    "bridge_adjacent_modules": 11,
+    "other_modules": 21,
+    "direct_complete_derivations": 0
+  },
+  "claims": [
+    {
+      "id": "VMS-MB-01",
+      "title": "Primitives and objects",
+      "source_latex_line_span": "980–1007",
+      "source_latex_sha256": "ad2762a1c53ae5f6d8104408e410c0d5ec82744304151f735d2a0181ba37dd2a",
+      "evidence_class": "Definitions and analogues",
+      "related_blocks": [
+        "F0000",
+        "F0005",
+        "F0014"
+      ],
+      "verified_piece": "F0000 checks geometric scaling identities; F0005 constructs an antisymmetric tensor from a potential; F0014 checks an assumed loop-mass functional.",
+      "unverified_vms_specific_step": "No module establishes a physically propagating void surface or obtains the VMS transport one-form and its action from A1–A3.",
+      "evidence_kind": "definition / model input",
+      "direct_complete_vms_derivation_in_32_block_zip": false,
+      "interpretation": "The related blocks cannot establish the full source claim solely by passing."
+    },
+    {
+      "id": "VMS-MB-02",
+      "title": "Conservation premises",
+      "source_latex_line_span": "1029–1047",
+      "source_latex_sha256": "ad2762a1c53ae5f6d8104408e410c0d5ec82744304151f735d2a0181ba37dd2a",
+      "evidence_class": "Related differential identities",
+      "related_blocks": [
+        "F0005",
+        "F0007",
+        "F0024"
+      ],
+      "verified_piece": "F0005 checks component identities of a potential-generated two-form, F0007 derives wave equations from vacuum Maxwell equations, and F0024 checks conventional charge continuity.",
+      "unverified_vms_specific_step": "The inference that finite space tension A3 supplies d⋆K=0, rather than this being an independently specified field equation, has no dedicated proof obligation.",
+      "evidence_kind": "analogous mathematical derivation",
+      "direct_complete_vms_derivation_in_32_block_zip": false,
+      "interpretation": "The related blocks cannot establish the full source claim solely by passing."
+    },
+    {
+      "id": "VMS-MB-03",
+      "title": "Wave equation and gauge",
+      "source_latex_line_span": "1049–1061",
+      "source_latex_sha256": "ad2762a1c53ae5f6d8104408e410c0d5ec82744304151f735d2a0181ba37dd2a",
+      "evidence_class": "Related wave calculus",
+      "related_blocks": [
+        "F0005",
+        "F0007"
+      ],
+      "verified_piece": "F0007 tests curl-based vacuum wave equations after accepting Maxwell's vacuum equations; F0005 verifies field-tensor properties.",
+      "unverified_vms_specific_step": "No code checks the claimed caustic-axis constraint, the gauge choice required for the proposed void transport, or the full asserted equivalence under VMS geometry.",
+      "evidence_kind": "analogous mathematical derivation",
+      "direct_complete_vms_derivation_in_32_block_zip": false,
+      "interpretation": "The related blocks cannot establish the full source claim solely by passing."
+    },
+    {
+      "id": "VMS-MB-04",
+      "title": "Variational transport",
+      "source_latex_line_span": "1063–1075",
+      "source_latex_sha256": "ad2762a1c53ae5f6d8104408e410c0d5ec82744304151f735d2a0181ba37dd2a",
+      "evidence_class": "Related action calculus",
+      "related_blocks": [
+        "F0005"
+      ],
+      "verified_piece": "F0005 symbolically examines the standard gauge-potential field tensor and action-variation algebra.",
+      "unverified_vms_specific_step": "No module starts with the author's void boundary and derives the particular VMS transport action and its surface-action-density normalization.",
+      "evidence_kind": "analogous mathematical derivation",
+      "direct_complete_vms_derivation_in_32_block_zip": false,
+      "interpretation": "The related blocks cannot establish the full source claim solely by passing."
+    },
+    {
+      "id": "VMS-MB-05",
+      "title": "Null waves and polarization",
+      "source_latex_line_span": "1077–1090",
+      "source_latex_sha256": "ad2762a1c53ae5f6d8104408e410c0d5ec82744304151f735d2a0181ba37dd2a",
+      "evidence_class": "Adjacent wave and mode tests",
+      "related_blocks": [
+        "F0007",
+        "F0013"
+      ],
+      "verified_piece": "F0007 concerns Maxwell vacuum waves; F0013 checks consequences of a specified loop quantization condition.",
+      "unverified_vms_specific_step": "No direct test of the fold-caustic Airy construction, claimed polarization selection by its normal, or caustic-derived count of modes.",
+      "evidence_kind": "adjacent mathematics",
+      "direct_complete_vms_derivation_in_32_block_zip": false,
+      "interpretation": "The related blocks cannot establish the full source claim solely by passing."
+    },
+    {
+      "id": "VMS-MB-06",
+      "title": "Energy transport",
+      "source_latex_line_span": "1092–1110",
+      "source_latex_sha256": "ad2762a1c53ae5f6d8104408e410c0d5ec82744304151f735d2a0181ba37dd2a",
+      "evidence_class": "Different inverse-square and energy laws",
+      "related_blocks": [
+        "F0002",
+        "F0015",
+        "F0025"
+      ],
+      "verified_piece": "F0002 obtains radial 1/r² gravity scaling from an assumed Poisson problem; F0015 and F0025 test the conventional electromagnetic Poynting theorem.",
+      "unverified_vms_specific_step": "None of these tests implements the specific proposed VMS transport-current expression or the stated current-conservation inference from its vacuum transport equations.",
+      "evidence_kind": "adjacent mathematical derivations",
+      "direct_complete_vms_derivation_in_32_block_zip": false,
+      "interpretation": "The related blocks cannot establish the full source claim solely by passing."
+    },
+    {
+      "id": "VMS-MB-07",
+      "title": "Broken closure and sources",
+      "source_latex_line_span": "1154–1181",
+      "source_latex_sha256": "ad2762a1c53ae5f6d8104408e410c0d5ec82744304151f735d2a0181ba37dd2a",
+      "evidence_class": "Related source continuity",
+      "related_blocks": [
+        "F0005",
+        "F0023",
+        "F0024"
+      ],
+      "verified_piece": "F0005 verifies source-coupled Maxwell action components; F0023 examines Ampère–Maxwell; F0024 checks conventional charge continuity.",
+      "unverified_vms_specific_step": "No code demonstrates that imperfect void closure generates the particular three-form source J appearing in the VMS appendix.",
+      "evidence_kind": "analogous mathematical derivation",
+      "direct_complete_vms_derivation_in_32_block_zip": false,
+      "interpretation": "The related blocks cannot establish the full source claim solely by passing."
+    },
+    {
+      "id": "VMS-MB-08",
+      "title": "Source action and flux",
+      "source_latex_line_span": "1183–1207",
+      "source_latex_sha256": "ad2762a1c53ae5f6d8104408e410c0d5ec82744304151f735d2a0181ba37dd2a",
+      "evidence_class": "Related source/flux mathematics",
+      "related_blocks": [
+        "F0005",
+        "F0021",
+        "F0024"
+      ],
+      "verified_piece": "F0005 treats a standard field action with source terms; F0021 checks Gauss's law, and F0024 checks the usual continuity identity.",
+      "unverified_vms_specific_step": "No direct executable check of the appendix's differential-form source action, its complete gauge variation, and the stated three-form flux relationship.",
+      "evidence_kind": "analogous mathematical derivation",
+      "direct_complete_vms_derivation_in_32_block_zip": false,
+      "interpretation": "The related blocks cannot establish the full source claim solely by passing."
+    },
+    {
+      "id": "VMS-MB-09",
+      "title": "Source energy balance",
+      "source_latex_line_span": "1210–1235",
+      "source_latex_sha256": "ad2762a1c53ae5f6d8104408e410c0d5ec82744304151f735d2a0181ba37dd2a",
+      "evidence_class": "Different energy-balance formalism",
+      "related_blocks": [
+        "F0015",
+        "F0025"
+      ],
+      "verified_piece": "F0015 and F0025 check energy transport expressed with E, B and the Poynting vector.",
+      "unverified_vms_specific_step": "Neither checks the specific VMS transport current under sources or its claimed source-dependent exterior-form balance law.",
+      "evidence_kind": "adjacent mathematical derivations",
+      "direct_complete_vms_derivation_in_32_block_zip": false,
+      "interpretation": "The related blocks cannot establish the full source claim solely by passing."
+    }
+  ],
+  "modules": [
+    {
+      "id": "F0000",
+      "zip_member": "sympy/f0000/CAS_F0000_VERIFY.py",
+      "sha256": "47dfe28c7054564e2e1092b45ffafd538a21762b7b10bee8a55312b7c2c05c2b",
+      "lines": 102,
+      "title": "F0000 — Geometric scaling lemmas (axiomatic layer)",
+      "declared_chain_and_calref": [],
+      "python_assert_count": 11,
+      "raise_count": 0,
+      "failure_counter_present": false,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [
+        "VMS-MB-01"
+      ],
+      "role": "bridge-adjacent"
+    },
+    {
+      "id": "F0001",
+      "zip_member": "sympy/f0001/CAS_F0001_VERIFY.py",
+      "sha256": "6920b08dc62dc08ac682c396e928e0904e410a42fe915dae621cd387a64b953f",
+      "lines": 180,
+      "title": "Newton's law from variational closure.",
+      "declared_chain_and_calref": [
+        "Pillar: Mechanics | Chain: S1.1-S1.4 -> Euler-Lagrange -> m*a = F",
+        "CalRef: Mechanics_Calibration S1B (force closure)"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [],
+      "role": "outside nine-claim scope"
+    },
+    {
+      "id": "F0002",
+      "zip_member": "sympy/f0002/CAS_F0002_VERIFY.py",
+      "sha256": "9b1c53ec00caa4fda3077b241f885c66a5e0ef03fae4ed57847c404f0e18c85a",
+      "lines": 225,
+      "title": "Newtonian potential and 1/r^2 limit.",
+      "declared_chain_and_calref": [
+        "Pillar: Mechanics | Chain: Poisson eq -> spherical Laplacian -> Phi = -Gm/r -> F ~ 1/r^2",
+        "CalRef: Mechanics_Calibration S1A (potential closure)"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [
+        "VMS-MB-06"
+      ],
+      "role": "bridge-adjacent"
+    },
+    {
+      "id": "F0003",
+      "zip_member": "sympy/f0003/CAS_F0003_VERIFY.py",
+      "sha256": "0b4324ee955c2bf62c95f367ffa1717dcbccc5b5606d3af56bccd1888f35e2bf",
+      "lines": 172,
+      "title": "Relativistic dispersion + mass-energy relation.",
+      "declared_chain_and_calref": [
+        "Pillar: Mechanics (Particle) | Chain: Lorentz invariance -> E^2 = p^2c^2 + m^2c^4 -> E=mc^2",
+        "CalRef: Particle Mechanics (relativistic dispersion, VMS mass m = C*tau*ell)"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [],
+      "role": "outside nine-claim scope"
+    },
+    {
+      "id": "F0004",
+      "zip_member": "sympy/f0004/CAS_F0004_VERIFY.py",
+      "sha256": "a57cbfdac3e0b85e8ea6f571aa6811ef910f51618c81b7366fdcac2d2f91288e",
+      "lines": 264,
+      "title": "Lorentz force from covariant formulation.",
+      "declared_chain_and_calref": [
+        "Pillar: Electromagnetism | Chain: F^{mu nu} -> F^mu_nu -> dp^mu/dtau = qF^mu_nu u^nu",
+        "CalRef: EM field tensor -> 3-vector Lorentz force"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [],
+      "role": "outside nine-claim scope"
+    },
+    {
+      "id": "F0005",
+      "zip_member": "sympy/f0005/CAS_F0005_VERIFY.py",
+      "sha256": "50471993e03f6566d043a33e2fde41931f67f70aaab4b1296379c1698368fe3b",
+      "lines": 252,
+      "title": "Maxwell equations from action principle.",
+      "declared_chain_and_calref": [
+        "Pillar: Electromagnetism | Chain: S[A] -> delta S = 0 -> d_nu F^{nu mu} = -mu_0 J^mu",
+        "CalRef: EM action -> inhomogeneous Maxwell + Bianchi identity"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [
+        "VMS-MB-01",
+        "VMS-MB-02",
+        "VMS-MB-03",
+        "VMS-MB-04",
+        "VMS-MB-07",
+        "VMS-MB-08"
+      ],
+      "role": "bridge-adjacent"
+    },
+    {
+      "id": "F0006",
+      "zip_member": "sympy/f0006/CAS_F0006_VERIFY.py",
+      "sha256": "3767987386c5d68ff5a2acde29889897f7a345c1f11b370d0e3f754392278a07",
+      "lines": 229,
+      "title": "Lepton mass scaling (mu/e ~ 206.77).",
+      "declared_chain_and_calref": [
+        "Pillar: Particle Mechanics | Chain: loop mass def -> ratio law -> winding scaling",
+        "CalRef: Particle Mechanics appendix a73, PM_Calibration"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [],
+      "role": "outside nine-claim scope"
+    },
+    {
+      "id": "F0007",
+      "zip_member": "sympy/f0007/CAS_F0007_VERIFY.py",
+      "sha256": "50ee6beb3efba4c6067150e5550c007c2856f2542f65869024c6137e57690300",
+      "lines": 283,
+      "title": "Vacuum wave equations and c-identity.",
+      "declared_chain_and_calref": [
+        "Pillar: Electromagnetism | Chain: Maxwell(vacuum) -> curl-of-curl -> wave eqn",
+        "CalRef: Electromagnetism Math Appendix"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [
+        "VMS-MB-02",
+        "VMS-MB-03",
+        "VMS-MB-05"
+      ],
+      "role": "bridge-adjacent"
+    },
+    {
+      "id": "F0008",
+      "zip_member": "sympy/f0008/CAS_F0008_VERIFY.py",
+      "sha256": "b92be833122d2edfefdc022918287e8812bb8deda22460c55080ca98d0d34ffd",
+      "lines": 290,
+      "title": "Hydrogen Balmer H-alpha dictionary hook.",
+      "declared_chain_and_calref": [
+        "Pillar: Spectroscopy Anchors | Chain: Rydberg -> Balmer -> H-alpha",
+        "CalRef: Spectroscopy Anchors section"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [],
+      "role": "outside nine-claim scope"
+    },
+    {
+      "id": "F0009",
+      "zip_member": "sympy/f0009/CAS_F0009_VERIFY.py",
+      "sha256": "797dfb16fd565c79d9da362804742ea37c10384a9cc91cdf7a79a9c75c82f431",
+      "lines": 233,
+      "title": "Fundamental thermodynamic relation.",
+      "declared_chain_and_calref": [
+        "Pillar: Thermodynamics | Chain: U(S,V,N) -> total differential -> dU=TdS-pdV+mudN",
+        "CalRef: Thermodynamics Math Appendix S1"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [],
+      "role": "outside nine-claim scope"
+    },
+    {
+      "id": "F0010",
+      "zip_member": "sympy/f0010/CAS_F0010_VERIFY.py",
+      "sha256": "1de91e038de125ad50b6bb383ed72a4c0ce30d8d5dc706962b4a4c9680cb772b",
+      "lines": 232,
+      "title": "Ideal-gas calibration (PV=nRT, Z definition).",
+      "declared_chain_and_calref": [
+        "Pillar: Thermodynamics | Chain: ideal gas -> R_eff -> Z -> virial",
+        "CalRef: Thermodynamics Calibration S5Y.1-5Y.3"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [],
+      "role": "outside nine-claim scope"
+    },
+    {
+      "id": "F0011",
+      "zip_member": "sympy/f0011/CAS_F0011_VERIFY.py",
+      "sha256": "4418557a385f62f40fccdf241e08c614d36f0f0a3da35a68109ed96c2d56f10e",
+      "lines": 236,
+      "title": "Work-energy theorem (Delta K = integral F dx).",
+      "declared_chain_and_calref": [
+        "Pillar: Mechanics | Chain: Newton -> chain rule -> power -> work integral -> Delta K",
+        "CalRef: Mechanics Math Appendix S2.2-2.4"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [],
+      "role": "outside nine-claim scope"
+    },
+    {
+      "id": "F0012",
+      "zip_member": "sympy/f0012/CAS_F0012_VERIFY.py",
+      "sha256": "ef7d4ac7e1b0b407cacd5c0c5fb7a3b014adb6d8e094520c0c1dbaace1970ccc",
+      "lines": 207,
+      "title": "Gravitational energy density (rho_g = -(grad Phi)^2/(8*pi*G)).",
+      "declared_chain_and_calref": [
+        "Pillar: Mechanics | Chain: Poisson -> potential energy -> IBP -> energy density",
+        "CalRef: Mathematical Bridge S8A, Mechanics Calibration S3C"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [],
+      "role": "outside nine-claim scope"
+    },
+    {
+      "id": "F0013",
+      "zip_member": "sympy/f0013/CAS_F0013_VERIFY.py",
+      "sha256": "97596a680bf82f094c5eec638df9b8722dde75e03c5842092f0d055f0a3c6aac",
+      "lines": 182,
+      "title": "Wave-particle boundary continuity / IGW mode quantization.",
+      "declared_chain_and_calref": [
+        "Pillar: Particle Mechanics | Chain: Bohr-Sommerfeld -> de Broglie -> mode quantization",
+        "CalRef: Mathematical Bridge S5.2, Particle Mechanics preliminaries a71"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [
+        "VMS-MB-05"
+      ],
+      "role": "bridge-adjacent"
+    },
+    {
+      "id": "F0014",
+      "zip_member": "sympy/f0014/CAS_F0014_VERIFY.py",
+      "sha256": "931408ac8a1fb50b7744422c16588f8e7cfad345dbe3dea69e13983a2b06cdbf",
+      "lines": 175,
+      "title": "Mass-geometry coupling (m as loop functional).",
+      "declared_chain_and_calref": [
+        "Pillar: Particle Mechanics | Chain: loop integral -> curvature model -> C* calibration"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [
+        "VMS-MB-01"
+      ],
+      "role": "bridge-adjacent"
+    },
+    {
+      "id": "F0015",
+      "zip_member": "sympy/f0015/CAS_F0015_VERIFY.py",
+      "sha256": "6241f6286876b60a4922192db6798fab28f1ae9d65434c6a02f8a6606ac5420b",
+      "lines": 225,
+      "title": "Momentum flux conservation (Poynting theorem).",
+      "declared_chain_and_calref": [
+        "Pillar: Electromagnetism | Chain: Maxwell -> energy density -> Poynting theorem",
+        "CalRef: Electromagnetism Math Appendix S3.4, Calibration S2B"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [
+        "VMS-MB-06",
+        "VMS-MB-09"
+      ],
+      "role": "bridge-adjacent"
+    },
+    {
+      "id": "F0016",
+      "zip_member": "sympy/f0016/CAS_F0016_VERIFY.py",
+      "sha256": "73ebab6d3ffd983e21045b3aec19b3a50ba5f8481eb86d0a09df1e70f2fa68e6",
+      "lines": 199,
+      "title": "Entropy production (sigma = Jq . grad(1/T) >= 0).",
+      "declared_chain_and_calref": [
+        "Pillar: Thermodynamics | Chain: local equil -> entropy balance -> Fourier -> non-negativity"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [],
+      "role": "outside nine-claim scope"
+    },
+    {
+      "id": "F0017",
+      "zip_member": "sympy/f0017/CAS_F0017_VERIFY.py",
+      "sha256": "ba32f562218e79af4fb2310b103745bd6929fb782397b658336aa284a0249f0d",
+      "lines": 198,
+      "title": "Heat capacity relation (Cp - Cv = R_eff).",
+      "declared_chain_and_calref": [
+        "Pillar: Thermodynamics | Chain: enthalpy -> ideal gas -> Cp - Cv = R_eff"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [],
+      "role": "outside nine-claim scope"
+    },
+    {
+      "id": "F0018",
+      "zip_member": "sympy/f0018/CAS_F0018_VERIFY.py",
+      "sha256": "30cb92f37d4fe5853c5f7004bd4e9fe7739383719cd4a1964a9406b6f1dd0095",
+      "lines": 197,
+      "title": "Thermal conduction law (Fourier) as constitutive input.",
+      "declared_chain_and_calref": [
+        "Pillar: Thermodynamics | Chain: Fourier law -> energy balance -> diffusion equation"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [],
+      "role": "outside nine-claim scope"
+    },
+    {
+      "id": "F0019",
+      "zip_member": "sympy/f0019/CAS_F0019_VERIFY.py",
+      "sha256": "28c99702b4da5f0a27bee97159cfc502256e1168cc9ff50dfe14f360762c2b22",
+      "lines": 185,
+      "title": "Photoelectric relation (K_max = h*nu - phi).",
+      "declared_chain_and_calref": [
+        "Pillar: Electromagnetism | Chain: photon energy -> energy balance -> threshold",
+        "CalRef: Electromagnetism Math Appendix S5C, EM Calibration S5C"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [],
+      "role": "outside nine-claim scope"
+    },
+    {
+      "id": "F0020",
+      "zip_member": "sympy/f0020/CAS_F0020_VERIFY.py",
+      "sha256": "d542b9d3d55d0a596ff09d8d8252ba88b8e0caa3e0b38176af953d37092607b1",
+      "lines": 221,
+      "title": "Hydrogen spectral fine structure (En + ΔEn).",
+      "declared_chain_and_calref": [
+        "Pillar: Particle Mechanics | Chain: baseline Rydberg → fine-structure correction → factorised En",
+        "CalRef: Math Appendix §5D, Calibration §5D"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [],
+      "role": "outside nine-claim scope"
+    },
+    {
+      "id": "F0021",
+      "zip_member": "sympy/f0021/CAS_F0021_VERIFY.py",
+      "sha256": "fe5341df990407e11dab5d5db9d39065ecf48d08510db3896b11634d1a78cc2d",
+      "lines": 233,
+      "title": "Gauss's law (∇·E = ρ/ε₀).",
+      "declared_chain_and_calref": [
+        "Pillar: Electromagnetism | Chain: differential form → divergence theorem → integral form → localisation",
+        "CalRef: Math Appendix §3.1–3.3, EM Calibration §2A"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [
+        "VMS-MB-08"
+      ],
+      "role": "bridge-adjacent"
+    },
+    {
+      "id": "F0022",
+      "zip_member": "sympy/f0022/CAS_F0022_VERIFY.py",
+      "sha256": "053036552aadcbe56afc7022f097606170cb19a087d56ef35f79ca893ef0dfc2",
+      "lines": 224,
+      "title": "Faraday's law (∇×E = −∂B/∂t).",
+      "declared_chain_and_calref": [
+        "Pillar: Electromagnetism | Chain: differential Faraday → Stokes → integral form → localisation",
+        "CalRef: Math Appendix §3.4–3.6, EM Calibration §2B"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [],
+      "role": "outside nine-claim scope"
+    },
+    {
+      "id": "F0023",
+      "zip_member": "sympy/f0023/CAS_F0023_VERIFY.py",
+      "sha256": "4490d1d0b7017adf0fd1df2691a4bb8b0cf4373da4d5dc0b9c8af9e6773be929",
+      "lines": 232,
+      "title": "Ampère–Maxwell law (∇×B = μ₀J + μ₀ε₀ ∂E/∂t).",
+      "declared_chain_and_calref": [
+        "Pillar: Electromagnetism | Chain: differential Ampère–Maxwell → Stokes → integral form → localisation",
+        "CalRef: Math Appendix §3.7–3.9, EM Calibration §2C"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [
+        "VMS-MB-07"
+      ],
+      "role": "bridge-adjacent"
+    },
+    {
+      "id": "F0024",
+      "zip_member": "sympy/f0024/CAS_F0024_VERIFY.py",
+      "sha256": "ebd6462ab68889fe02562e79d93b942c6c0163d7cbbc4b81a63fcc8cab86bfda",
+      "lines": 193,
+      "title": "Charge continuity equation (∂ρ/∂t + ∇·J = 0).",
+      "declared_chain_and_calref": [
+        "Pillar: Electromagnetism | Chain: div(Ampère–Maxwell) → vector identity → Gauss substitution → continuity",
+        "CalRef: Math Appendix §4.1, EM Calibration §3A"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [
+        "VMS-MB-02",
+        "VMS-MB-07",
+        "VMS-MB-08"
+      ],
+      "role": "bridge-adjacent"
+    },
+    {
+      "id": "F0025",
+      "zip_member": "sympy/f0025/CAS_F0025_VERIFY.py",
+      "sha256": "dd6a4863d50053acccef70957a030e94fa1a3bf4425919fb80b0d82167c08374",
+      "lines": 202,
+      "title": "Poynting theorem (∂u/∂t + ∇·S + J·E = 0).",
+      "declared_chain_and_calref": [
+        "Pillar: Electromagnetism | Chain: u definition → ∂u/∂t → Maxwell substitution → vector identity → S → theorem",
+        "CalRef: Math Appendix §4.2–4.3, EM Calibration §4B"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [
+        "VMS-MB-06",
+        "VMS-MB-09"
+      ],
+      "role": "bridge-adjacent"
+    },
+    {
+      "id": "F0026",
+      "zip_member": "sympy/f0026/CAS_F0026_VERIFY.py",
+      "sha256": "4f60216e1e053bf67dd74448028ca4df4209398ff89e0d12c05fbffede56fd30",
+      "lines": 205,
+      "title": "Virial theorem (2⟨T⟩ = ⟨r·∇V⟩).",
+      "declared_chain_and_calref": [
+        "Pillar: Mechanics | Chain: G = Σ p·r → dG/dt = 2T + Σ F·r → F = −∇V → time average → virial",
+        "CalRef: Math Appendix §4A, Mechanics Calibration §3B"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [],
+      "role": "outside nine-claim scope"
+    },
+    {
+      "id": "F0027",
+      "zip_member": "sympy/f0027/CAS_F0027_VERIFY.py",
+      "sha256": "ba27c2f7eae79f48b42157c2c0a4c0f3c4339f7a62353d77e89d142638b25913",
+      "lines": 172,
+      "title": "Simple harmonic oscillator (mẍ + kx = 0; ω² = k/m).",
+      "declared_chain_and_calref": [
+        "Pillar: Mechanics | Chain: quadratic potential → force → Newton → EOM → ω² identification",
+        "CalRef: Math Appendix §4B–4C, Mechanics Calibration §2A"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [],
+      "role": "outside nine-claim scope"
+    },
+    {
+      "id": "F0028",
+      "zip_member": "sympy/f0028/CAS_F0028_VERIFY.py",
+      "sha256": "4461d5b1abcd1eba407ceb83fa04e3b1191293d26716d6253c8a170dd92098e9",
+      "lines": 184,
+      "title": "de Broglie relation (p = h/λ).",
+      "declared_chain_and_calref": [
+        "Pillar: Particle Mechanics | Chain: constitutive postulate p=h/λ → photon dictionary check → wave number",
+        "CalRef: Math Appendix §4A, Particle Mechanics Calibration §3C"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [],
+      "role": "outside nine-claim scope"
+    },
+    {
+      "id": "F0029",
+      "zip_member": "sympy/f0029/CAS_F0029_VERIFY.py",
+      "sha256": "68c16e3eab8658a15bcfe383b04a5ff511e4277be2694d2eaf05c00d933363c1",
+      "lines": 172,
+      "title": "Partition function linkage (Z → F, U, S, Cv).",
+      "declared_chain_and_calref": [
+        "Pillar: Thermodynamics | Chain: Z(β) → F = −lnZ/β → U = −∂lnZ/∂β → S = kB(lnZ+βU) → Cv",
+        "CalRef: Math Appendix §5A, Thermodynamics Calibration §6A"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [],
+      "role": "outside nine-claim scope"
+    },
+    {
+      "id": "F0030",
+      "zip_member": "sympy/f0030/CAS_F0030_VERIFY.py",
+      "sha256": "c6de89129aba14c109fb3fdc28201d97fe15fcd8baa48f992467216184a0ad5b",
+      "lines": 183,
+      "title": "Heat diffusion equation (∂T/∂t = κ∇²T).",
+      "declared_chain_and_calref": [
+        "Pillar: Thermodynamics | Chain: energy conservation + Fourier's law + u=ρcT → diffusion equation",
+        "CalRef: Math Appendix §4D, Thermodynamics Calibration §4D"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [],
+      "role": "outside nine-claim scope"
+    },
+    {
+      "id": "F0031",
+      "zip_member": "sympy/f0031/CAS_F0031_VERIFY.py",
+      "sha256": "3435d1e023b0c178cb43306f2331202371734597c24cf240bf4ad67bf37ad021",
+      "lines": 181,
+      "title": "Radiative flux law j = σT⁴ (PROVISIONAL).",
+      "declared_chain_and_calref": [
+        "CalRef: Formula Atlas F0031, EM Laws L6–L9, Thermo radiation section"
+      ],
+      "python_assert_count": 0,
+      "raise_count": 0,
+      "failure_counter_present": true,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false,
+      "direct_vms_transport_current_verified": false,
+      "matched_to_bridge_claims": [],
+      "role": "outside nine-claim scope"
+    }
+  ]
+}

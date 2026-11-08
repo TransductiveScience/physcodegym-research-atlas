@@ -961,6 +961,11 @@
       "url": "https://physics.transductive.science/people/virgil-waters/audit-runner-integrity/systemic-test/",
       "title": "31 failures, 32 green lights",
       "topic": "Independent audit / full-suite negative control"
+    },
+    {
+      "url": "https://physics.transductive.science/people/virgil-waters/derivation-review/traceability/",
+      "title": "What the VMS audit actually verifies",
+      "topic": "Researcher / 9-claim 32-module source traceability"
     }
   ]
 }
