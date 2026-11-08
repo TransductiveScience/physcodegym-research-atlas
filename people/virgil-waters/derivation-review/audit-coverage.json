@@ -1,0 +1,299 @@
+{
+  "captured_at": "2026-11-08T19:15:08.864520+00:00",
+  "primary_url": "https://www.vms-institute.org/audit/vms-sympy-audit.zip",
+  "zip_sha256": "42ff1df323780157baa374996f7f69f3fddbdd9a8348d3fcb4edd90dca393737",
+  "module_count": 32,
+  "scope": "Static source inventory, not runtime proof verification",
+  "hodge_named_modules": 0,
+  "wedge_named_modules": 0,
+  "files": [
+    {
+      "block": "F0000",
+      "archive_path": "sympy/f0000/CAS_F0000_VERIFY.py",
+      "summary": "F0000 — Geometric scaling lemmas (axiomatic layer)",
+      "sha256": "47dfe28c7054564e2e1092b45ffafd538a21762b7b10bee8a55312b7c2c05c2b",
+      "lines": 102,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0001",
+      "archive_path": "sympy/f0001/CAS_F0001_VERIFY.py",
+      "summary": "Newton's law from variational closure.",
+      "sha256": "6920b08dc62dc08ac682c396e928e0904e410a42fe915dae621cd387a64b953f",
+      "lines": 180,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0002",
+      "archive_path": "sympy/f0002/CAS_F0002_VERIFY.py",
+      "summary": "Newtonian potential and 1/r^2 limit.",
+      "sha256": "9b1c53ec00caa4fda3077b241f885c66a5e0ef03fae4ed57847c404f0e18c85a",
+      "lines": 225,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0003",
+      "archive_path": "sympy/f0003/CAS_F0003_VERIFY.py",
+      "summary": "Relativistic dispersion + mass-energy relation.",
+      "sha256": "0b4324ee955c2bf62c95f367ffa1717dcbccc5b5606d3af56bccd1888f35e2bf",
+      "lines": 172,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0004",
+      "archive_path": "sympy/f0004/CAS_F0004_VERIFY.py",
+      "summary": "Lorentz force from covariant formulation.",
+      "sha256": "a57cbfdac3e0b85e8ea6f571aa6811ef910f51618c81b7366fdcac2d2f91288e",
+      "lines": 264,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0005",
+      "archive_path": "sympy/f0005/CAS_F0005_VERIFY.py",
+      "summary": "Maxwell equations from action principle.",
+      "sha256": "50471993e03f6566d043a33e2fde41931f67f70aaab4b1296379c1698368fe3b",
+      "lines": 252,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0006",
+      "archive_path": "sympy/f0006/CAS_F0006_VERIFY.py",
+      "summary": "Lepton mass scaling (mu/e ~ 206.77).",
+      "sha256": "3767987386c5d68ff5a2acde29889897f7a345c1f11b370d0e3f754392278a07",
+      "lines": 229,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0007",
+      "archive_path": "sympy/f0007/CAS_F0007_VERIFY.py",
+      "summary": "Vacuum wave equations and c-identity.",
+      "sha256": "50ee6beb3efba4c6067150e5550c007c2856f2542f65869024c6137e57690300",
+      "lines": 283,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0008",
+      "archive_path": "sympy/f0008/CAS_F0008_VERIFY.py",
+      "summary": "Hydrogen Balmer H-alpha dictionary hook.",
+      "sha256": "b92be833122d2edfefdc022918287e8812bb8deda22460c55080ca98d0d34ffd",
+      "lines": 290,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0009",
+      "archive_path": "sympy/f0009/CAS_F0009_VERIFY.py",
+      "summary": "Fundamental thermodynamic relation.",
+      "sha256": "797dfb16fd565c79d9da362804742ea37c10384a9cc91cdf7a79a9c75c82f431",
+      "lines": 233,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0010",
+      "archive_path": "sympy/f0010/CAS_F0010_VERIFY.py",
+      "summary": "Ideal-gas calibration (PV=nRT, Z definition).",
+      "sha256": "1de91e038de125ad50b6bb383ed72a4c0ce30d8d5dc706962b4a4c9680cb772b",
+      "lines": 232,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0011",
+      "archive_path": "sympy/f0011/CAS_F0011_VERIFY.py",
+      "summary": "Work-energy theorem (Delta K = integral F dx).",
+      "sha256": "4418557a385f62f40fccdf241e08c614d36f0f0a3da35a68109ed96c2d56f10e",
+      "lines": 236,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0012",
+      "archive_path": "sympy/f0012/CAS_F0012_VERIFY.py",
+      "summary": "Gravitational energy density (rho_g = -(grad Phi)^2/(8*pi*G)).",
+      "sha256": "ef7d4ac7e1b0b407cacd5c0c5fb7a3b014adb6d8e094520c0c1dbaace1970ccc",
+      "lines": 207,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0013",
+      "archive_path": "sympy/f0013/CAS_F0013_VERIFY.py",
+      "summary": "Wave-particle boundary continuity / IGW mode quantization.",
+      "sha256": "97596a680bf82f094c5eec638df9b8722dde75e03c5842092f0d055f0a3c6aac",
+      "lines": 182,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0014",
+      "archive_path": "sympy/f0014/CAS_F0014_VERIFY.py",
+      "summary": "Mass-geometry coupling (m as loop functional).",
+      "sha256": "931408ac8a1fb50b7744422c16588f8e7cfad345dbe3dea69e13983a2b06cdbf",
+      "lines": 175,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0015",
+      "archive_path": "sympy/f0015/CAS_F0015_VERIFY.py",
+      "summary": "Momentum flux conservation (Poynting theorem).",
+      "sha256": "6241f6286876b60a4922192db6798fab28f1ae9d65434c6a02f8a6606ac5420b",
+      "lines": 225,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0016",
+      "archive_path": "sympy/f0016/CAS_F0016_VERIFY.py",
+      "summary": "Entropy production (sigma = Jq . grad(1/T) >= 0).",
+      "sha256": "73ebab6d3ffd983e21045b3aec19b3a50ba5f8481eb86d0a09df1e70f2fa68e6",
+      "lines": 199,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0017",
+      "archive_path": "sympy/f0017/CAS_F0017_VERIFY.py",
+      "summary": "Heat capacity relation (Cp - Cv = R_eff).",
+      "sha256": "ba32f562218e79af4fb2310b103745bd6929fb782397b658336aa284a0249f0d",
+      "lines": 198,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0018",
+      "archive_path": "sympy/f0018/CAS_F0018_VERIFY.py",
+      "summary": "Thermal conduction law (Fourier) as constitutive input.",
+      "sha256": "30cb92f37d4fe5853c5f7004bd4e9fe7739383719cd4a1964a9406b6f1dd0095",
+      "lines": 197,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0019",
+      "archive_path": "sympy/f0019/CAS_F0019_VERIFY.py",
+      "summary": "Photoelectric relation (K_max = h*nu - phi).",
+      "sha256": "28c99702b4da5f0a27bee97159cfc502256e1168cc9ff50dfe14f360762c2b22",
+      "lines": 185,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0020",
+      "archive_path": "sympy/f0020/CAS_F0020_VERIFY.py",
+      "summary": "Hydrogen spectral fine structure (En + ΔEn).",
+      "sha256": "d542b9d3d55d0a596ff09d8d8252ba88b8e0caa3e0b38176af953d37092607b1",
+      "lines": 221,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0021",
+      "archive_path": "sympy/f0021/CAS_F0021_VERIFY.py",
+      "summary": "Gauss's law (∇·E = ρ/ε₀).",
+      "sha256": "fe5341df990407e11dab5d5db9d39065ecf48d08510db3896b11634d1a78cc2d",
+      "lines": 233,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0022",
+      "archive_path": "sympy/f0022/CAS_F0022_VERIFY.py",
+      "summary": "Faraday's law (∇×E = −∂B/∂t).",
+      "sha256": "053036552aadcbe56afc7022f097606170cb19a087d56ef35f79ca893ef0dfc2",
+      "lines": 224,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0023",
+      "archive_path": "sympy/f0023/CAS_F0023_VERIFY.py",
+      "summary": "Ampère–Maxwell law (∇×B = μ₀J + μ₀ε₀ ∂E/∂t).",
+      "sha256": "4490d1d0b7017adf0fd1df2691a4bb8b0cf4373da4d5dc0b9c8af9e6773be929",
+      "lines": 232,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0024",
+      "archive_path": "sympy/f0024/CAS_F0024_VERIFY.py",
+      "summary": "Charge continuity equation (∂ρ/∂t + ∇·J = 0).",
+      "sha256": "ebd6462ab68889fe02562e79d93b942c6c0163d7cbbc4b81a63fcc8cab86bfda",
+      "lines": 193,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0025",
+      "archive_path": "sympy/f0025/CAS_F0025_VERIFY.py",
+      "summary": "Poynting theorem (∂u/∂t + ∇·S + J·E = 0).",
+      "sha256": "dd6a4863d50053acccef70957a030e94fa1a3bf4425919fb80b0d82167c08374",
+      "lines": 202,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0026",
+      "archive_path": "sympy/f0026/CAS_F0026_VERIFY.py",
+      "summary": "Virial theorem (2⟨T⟩ = ⟨r·∇V⟩).",
+      "sha256": "4f60216e1e053bf67dd74448028ca4df4209398ff89e0d12c05fbffede56fd30",
+      "lines": 205,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0027",
+      "archive_path": "sympy/f0027/CAS_F0027_VERIFY.py",
+      "summary": "Simple harmonic oscillator (mẍ + kx = 0; ω² = k/m).",
+      "sha256": "ba27c2f7eae79f48b42157c2c0a4c0f3c4339f7a62353d77e89d142638b25913",
+      "lines": 172,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0028",
+      "archive_path": "sympy/f0028/CAS_F0028_VERIFY.py",
+      "summary": "de Broglie relation (p = h/λ).",
+      "sha256": "4461d5b1abcd1eba407ceb83fa04e3b1191293d26716d6253c8a170dd92098e9",
+      "lines": 184,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0029",
+      "archive_path": "sympy/f0029/CAS_F0029_VERIFY.py",
+      "summary": "Partition function linkage (Z → F, U, S, Cv).",
+      "sha256": "68c16e3eab8658a15bcfe383b04a5ff511e4277be2694d2eaf05c00d933363c1",
+      "lines": 172,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0030",
+      "archive_path": "sympy/f0030/CAS_F0030_VERIFY.py",
+      "summary": "Heat diffusion equation (∂T/∂t = κ∇²T).",
+      "sha256": "c6de89129aba14c109fb3fdc28201d97fe15fcd8baa48f992467216184a0ad5b",
+      "lines": 183,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    },
+    {
+      "block": "F0031",
+      "archive_path": "sympy/f0031/CAS_F0031_VERIFY.py",
+      "summary": "Radiative flux law j = σT⁴ (PROVISIONAL).",
+      "sha256": "3435d1e023b0c178cb43306f2331202371734597c24cf240bf4ad67bf37ad021",
+      "lines": 181,
+      "contains_hodge_keyword": false,
+      "contains_wedge_keyword": false
+    }
+  ]
+}

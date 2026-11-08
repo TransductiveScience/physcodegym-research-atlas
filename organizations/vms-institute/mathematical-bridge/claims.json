@@ -1,0 +1,86 @@
+{
+  "title": "Mathematical Bridge source map",
+  "publication": "Mathematical Bridge — Math Appendix",
+  "publisher": "VMS Institute",
+  "captured_at": "2026-11-08T13:52:48Z",
+  "verified_same_live": "2026-11-08",
+  "source_pdf": "https://www.vms-institute.org/theory/pdf/Mathematical%20Bridge%20-%20Math%20Appendix.pdf",
+  "pdf_sha256": "e877adc928009929aba1a420cb75cf7300ca949f1608f28bfa66580c606f9400",
+  "source_latex": "https://www.vms-institute.org/theory/latex/mathematical-bridge-appendix.tex",
+  "latex_sha256": "ad2762a1c53ae5f6d8104408e410c0d5ec82744304151f735d2a0181ba37dd2a",
+  "claims": [
+    {
+      "id": "VMS-MB-01",
+      "title": "Primitives and objects",
+      "description": "A1–A3, Σ, display area, A, K=dA, Hodge star",
+      "latex_line_span": "980–1007",
+      "status": "source-mapped; requires individual proof evaluation",
+      "note": "Definitions and interpretation supplied by the institute; these are starting inputs."
+    },
+    {
+      "id": "VMS-MB-02",
+      "title": "Conservation premises",
+      "description": "Stokes’ relation; dK=0, d⋆K=0",
+      "latex_line_span": "1029–1047",
+      "status": "source-mapped; requires individual proof evaluation",
+      "note": "The second conservation equation is asserted as a physical consequence of A2–A3."
+    },
+    {
+      "id": "VMS-MB-03",
+      "title": "Wave equation and gauge",
+      "description": "Reparameterization A→A+dχ, divergence choice, □A=0",
+      "latex_line_span": "1049–1061",
+      "status": "source-mapped; requires individual proof evaluation",
+      "note": "The gauge freedom is explicitly part of the author's formulation."
+    },
+    {
+      "id": "VMS-MB-04",
+      "title": "Variational transport",
+      "description": "S[A] based on K∧⋆K",
+      "latex_line_span": "1063–1075",
+      "status": "source-mapped; requires individual proof evaluation",
+      "note": "Source presents stationarity as the derivation of the transport equations."
+    },
+    {
+      "id": "VMS-MB-05",
+      "title": "Null waves and polarization",
+      "description": "Null ansatz, transverse modes",
+      "latex_line_span": "1077–1090",
+      "status": "source-mapped; requires individual proof evaluation",
+      "note": "Specific wave-family discussion following the transport equations."
+    },
+    {
+      "id": "VMS-MB-06",
+      "title": "Energy transport",
+      "description": "A proposed transport current and inferred radial flux scaling",
+      "latex_line_span": "1092–1110",
+      "status": "source-mapped; requires individual proof evaluation",
+      "note": "This implication is a separate proposition, not contained automatically in the preceding PDEs."
+    },
+    {
+      "id": "VMS-MB-07",
+      "title": "Broken closure and sources",
+      "description": "A 3-form transport source J; dJ=0; d⋆K=J",
+      "latex_line_span": "1154–1181",
+      "status": "source-mapped; requires individual proof evaluation",
+      "note": "New sourced system, with a distinct current also denoted J."
+    },
+    {
+      "id": "VMS-MB-08",
+      "title": "Source action and flux",
+      "description": "S[A;J], source charge Q[V], boundary flux",
+      "latex_line_span": "1183–1207",
+      "status": "source-mapped; requires individual proof evaluation",
+      "note": "Geometric transport variables are used to express source strength."
+    },
+    {
+      "id": "VMS-MB-09",
+      "title": "Source energy balance",
+      "description": "A proposed source-dependent transport current balance",
+      "latex_line_span": "1210–1235",
+      "status": "source-mapped; requires individual proof evaluation",
+      "note": "This is an additional conservation/balance claim requiring its own algebraic verification."
+    }
+  ],
+  "challenge_evidence_published": false
+}

@@ -1,0 +1,51 @@
+{
+  "capture_date": "2026-11-08",
+  "source_kind": "institution-published-material",
+  "provenance": "Links and locally fetched checksums; external authors' claims are attributed",
+  "sources": [
+    {
+      "topic": "organization",
+      "url": "https://www.vms-institute.org/institute/"
+    },
+    {
+      "topic": "theory",
+      "url": "https://www.vms-institute.org/theory/"
+    },
+    {
+      "topic": "symbolic-audit",
+      "url": "https://www.vms-institute.org/audit/"
+    },
+    {
+      "topic": "audit-report",
+      "url": "https://www.vms-institute.org/audit-code/sympy/audit_report.json"
+    },
+    {
+      "topic": "numeric-audits",
+      "url": "https://www.vms-institute.org/patents-licensing/audits/"
+    },
+    {
+      "topic": "experiment",
+      "url": "https://www.vms-institute.org/experiments/lego-optic-bench/"
+    },
+    {
+      "topic": "applied-sciences",
+      "url": "https://www.vms-institute.org/applied-sciences/"
+    },
+    {
+      "topic": "challenge",
+      "url": "https://www.vms-institute.org/research/"
+    },
+    {
+      "topic": "patent-filing",
+      "url": "https://www.vms-institute.org/patents-licensing/patents/filing-record/"
+    },
+    {
+      "topic": "licensing",
+      "url": "https://www.vms-institute.org/patents-licensing/licensing/"
+    },
+    {
+      "topic": "ai-loader",
+      "url": "https://www.vms-institute.org/AI/"
+    }
+  ]
+}

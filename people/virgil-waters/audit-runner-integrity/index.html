@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#e9e8e2">
+<title>When 32 green lights miss a failing check · Transductive Science</title>
+<meta name="description" content="Independent, reproducible mutation test of the VMS Institute SymPy master audit: a failed subcheck can coexist with a green master verdict.">
+<link rel="canonical" href="https://physics.transductive.science/people/virgil-waters/audit-runner-integrity/"><link rel="stylesheet" href="/assets/style.css"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article"><meta property="og:title" content="When 32 green lights miss a failing check"></head>
+<body><a class="skip" href="#content">Skip to article</a>
+<header class="topbar"><a class="brand" href="/"><span class="brand-glyph">T<span>⋮</span>S</span><span>TRANSDUCTIVE<br><b>SCIENCE / PHYSICS</b></span></a><nav class="primary-nav" aria-label="Primary"><a href="/">Atlas</a><a href="/organizations/vms-institute/">Institute</a><a href="/people/virgil-waters/">Researcher</a><a href="/people/virgil-waters/derivation-review/">Audit map</a></nav><a class="source-link" href="https://www.vms-institute.org/audit/" rel="noopener">OFFICIAL AUDIT ↗</a></header>
+<div class="readout"><span>VMS / INDEPENDENT SOURCE-CODE AUDIT</span><span>08 NOV 2026</span><span>REPRODUCED / PUBLIC FINDING</span></div>
+<div class="site-grid"><main id="content">
+<header class="article-hero"><p class="eyebrow">Audit apparatus / fault injection / source-preserving investigation</p>
+<h1>When 32 green lights miss a failing check</h1>
+<p class="dek">The official VMS symbolic-audit master can report “32 PASS” even when one of its own modules explicitly reports “FAIL.” A controlled mutation test demonstrates exactly how.</p></header>
+<article class="body-copy">
+<section id="verdict"><p class="eyebrow">Result / three controlled runs</p>
+<h2>The same runner, three different outcomes</h2>
+<p>We downloaded the institute's official SymPy audit ZIP and verified its SHA-256. Three tests used independent temporary extractions. The original archive was never edited. One run preserved the original code; a second deliberately corrupted a single expected result inside module F0001; a third deliberately raised an exception as a positive control.</p>
+<table><thead><tr><th>Test</th><th>F0001 internal result</th><th>Master result</th><th>Exit code</th></tr></thead><tbody>
+<tr><td><strong>Original source</strong></td><td>7 PASS, 0 FAIL</td><td>32 PASS, 0 FAIL</td><td><code>0</code></td></tr>
+<tr><td><strong>False expected value</strong></td><td>6 PASS, 1 FAIL</td><td>32 PASS, 0 FAIL</td><td><code>0</code></td></tr>
+<tr><td><strong>Injected exception</strong></td><td>Exception before checks</td><td>31 PASS, 1 FAIL</td><td><code>1</code></td></tr>
+</tbody></table>
+<p><strong>Demonstrated defect:</strong> a failed inner check is not necessarily propagated into the top-level verdict. The master runner detects exceptions, but does not inspect the module's printed FAIL status or its internal <code>fail_count</code>.</p>
+<div class="note"><b>Important limit</b><p>The <em>unmodified</em> source did not reveal a hidden failing F0001 step. Its 31 reporting modules reported 334 successful internal checks and zero failing internal checks. F0000 separately passed its 11 Python assertions. This experiment proves a weakness in the runner's failure detection, not that the original computational checks were already failing.</p></div>
+<p><a class="readmore" href="/people/virgil-waters/audit-runner-integrity/results.json">Inspect the machine-readable results →</a></p>
+</section>
+<section id="mechanism"><p class="eyebrow">Cause / source inspection</p><h2>Why the master can miss failure</h2>
+<p>The released <code>sympy/run_master.py</code>, lines 81–94, calls each module's <code>run()</code> inside a <code>try</code> block and records <code>PASS</code> if the call returns normally. The exception branch records <code>FAIL</code>. It does not examine printed subcheck counts. The 31 modules F0001–F0031 follow a pattern of incrementing <code>fail_count</code> and printing a verdict, without raising an exception or returning an explicit failure value at the end. F0000 is different: it contains 11 executable Python assertions.</p>
+<p>In the mutation run, the expected value in F0001's Step 1 was changed from <code>m × xdot</code> to <code>m × xdot + 1</code>. Its symbolic comparison then reported one failed step. That local failure was visible in the module's output, but the master still marked its run as passing.</p>
+<div class="sequence"><div><b>LOCAL</b><strong>F0001 detects FAIL</strong><p>One deliberately incorrect expectation generates a nonzero residual.</p></div><div><b>RETURN</b><strong>No exception</strong><p>Its function finishes normally despite incrementing the failure counter.</p></div><div><b>MASTER</b><strong>PASS</strong><p>The wrapper equates a normal return with success.</p></div></div>
+<p>The positive-control run establishes the complementary behavior: an actual <code>AssertionError</code> is caught, F0001 is marked <code>FAIL</code>, and the master exits with code 1. Thus the fault is specifically in propagating <em>reported check failures</em>, not in handling Python exceptions.</p></section>
+<section id="global"><p class="eyebrow">Cross-block audit / skipped prerequisites</p>
+<h2>“Global consistency: PASS” also masks three skipped checks</h2>
+<p>The master runs <code>constants.check_consistency()</code> and <code>constants.check_identities()</code>. In the reproduced original run, the constant registry was empty; all three named cross-block identities were marked <strong>SKIP</strong>. The global boolean nevertheless remained true because the code accepts checks with absent prerequisites as successful overall.</p>
+<table><thead><tr><th>Identity</th><th>Observed status</th></tr></thead><tbody>
+<tr><td><code>c² ε₀ μ₀ = 1</code></td><td>SKIP</td></tr><tr><td><code>ħ = h/(2π)</code></td><td>SKIP</td></tr><tr><td>Stefan–Boltzmann coefficient identity</td><td>SKIP</td></tr>
+</tbody></table>
+<p>The distributed March 2026 JSON likewise contains <code>"constants_registered": []</code>. This does not make the identities false; it means the published <em>cross-block</em> verification did not exercise them in these runs.</p></section>
+<section id="scope"><p class="eyebrow">Scope / no extrapolation</p>
+<h2>What the experiment does and does not establish</h2>
+<p>It demonstrates a reproducible <strong>audit-runner reliability defect</strong>. It does not demonstrate that all 32 original algebraic checks are false, that the institute's entire physical ontology is inconsistent, or that an external panel has accepted a prize-winning mathematical break.</p>
+<p>Separately, the current symbolic audit ZIP does not explicitly implement the proposed Hodge-star transport current or source-balance equations in the institute's <a href="/organizations/vms-institute/mathematical-bridge/">Mathematical Bridge source map</a>. That is a <em>coverage question</em>. The present mutation experiment concerns failure propagation within code that <em>does</em> exist.</p>
+<p>The full independent Mathematical Bridge challenge counterexample remains private pending determination of the published challenge terms. No contest submission or prize adjudication is claimed.</p></section>
+<section id="repair"><p class="eyebrow">Engineering remediation / falsifiable retest</p>
+<h2>How the audit could be repaired</h2>
+<ol><li>Make every module expose a machine-readable, non-optional verdict, or raise an exception whenever <code>fail_count &gt; 0</code>.</li><li>Make the master reject a missing/unknown verdict rather than treating normal function return as proof of success.</li><li>Require an explicit, nonempty expected registry of constants and show distinct <code>PASS</code>, <code>FAIL</code> and <code>SKIP</code> counts for every global check.</li><li>Add fault-injection tests to continuous integration: each deliberately wrong subcheck must result in master failure and nonzero process exit.</li><li>Publish a source-equation-to-test matrix, distinguishing checked identities, accepted premises, numerical calibrations and independent physical predictions.</li></ol>
+<p>The clean acceptance test is direct: repeat the same one-line fault injection. A repaired runner must report F0001 as failed at the top level and exit unsuccessfully, without needing the module to throw an exception.</p></section>
+<section id="reproduce"><p class="eyebrow">Independent replication</p>
+<h2>Downloadable method and source fingerprint</h2>
+<p>The procedure retrieves the official ZIP, verifies its known SHA-256, extracts separate temporary copies, runs the original, performs the single controlled mutation, and runs the exception positive control. It leaves the original archive untouched. It requires Python 3 with SymPy installed.</p>
+<div class="statement"><strong>42ff1df3…</strong><span>Official ZIP SHA-256 starts with this prefix; full value below.</span></div>
+<p><code>42ff1df323780157baa374996f7f69f3fddbdd9a8348d3fcb4edd90dca393737</code></p>
+<p><a href="/people/virgil-waters/audit-runner-integrity/reproduce.py">Download the bounded reproduction script (.py) →</a> · <a href="/people/virgil-waters/audit-runner-integrity/results.json">Evidence JSON →</a></p>
+<p>Original sources: <a href="https://www.vms-institute.org/audit/vms-sympy-audit.zip">audit source ZIP</a>, <a href="https://www.vms-institute.org/audit/">audit documentation</a>, and <a href="/people/virgil-waters/derivation-review/audit-coverage.json">32-module source inventory</a>.</p></section>
+</article>
+<div class="bibliography"><p class="eyebrow">Editorial separation</p><p>The institution's own audit claims are described on the <a href="/organizations/vms-institute/audits/">neutral institute audit page</a>. This individual research record examines the publicly advocated mathematical claims and their verification apparatus without inferring an author's motives or character.</p><a href="/people/virgil-waters/derivation-review/">Return to the derivation review →</a><a href="/organizations/vms-institute/">Return to institution directory →</a></div>
+<div class="afterword"><a href="/people/virgil-waters/">Person dossier</a><a href="/organizations/vms-institute/audits/">Institution audit directory</a></div></main>
+<aside class="rail" aria-label="Research directory"><div class="rail-top"><span>INDEPENDENT VERIFICATION</span><span>2026.11.08</span></div>
+<h2>Audit evidence</h2><ul>
+<li><a href="/people/virgil-waters/audit-runner-integrity/"><small>Experiment / code integrity</small>False-green mutation test</a></li>
+<li><a href="/people/virgil-waters/audit-runner-integrity/results.json"><small>Machine record</small>Run results and outputs</a></li>
+<li><a href="/people/virgil-waters/audit-runner-integrity/reproduce.py"><small>Reproduction</small>Bounded replay script</a></li>
+<li><a href="/people/virgil-waters/derivation-review/"><small>Previous examination</small>32-module scope inventory</a></li>
+<li><a href="/organizations/vms-institute/mathematical-bridge/"><small>Source map</small>Mathematical Bridge</a></li>
+<li><a href="/organizations/vms-institute/audits/"><small>Institution</small>Published audits</a></li>
+</ul><div class="rail-bottom"><span class="rail-dot"></span> Evaluate claims, preserve originals, publish counterchecks.</div></aside></div>
+<footer><span>TRANSDUCTIVE SCIENCE · SOURCE-PRESERVING RESEARCH</span><a href="https://physics.transductive.science/people/virgil-waters/audit-runner-integrity/">PERMALINK ↗</a><span>08 NOV 2026</span></footer></body></html>

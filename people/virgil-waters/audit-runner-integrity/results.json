@@ -1,0 +1,54 @@
+{
+  "title": "VMS CAS master failure-propagation mutation test",
+  "date": "2026-11-08",
+  "publisher": "Transductive Science independent examination",
+  "original_zip": "https://www.vms-institute.org/audit/vms-sympy-audit.zip",
+  "original_zip_sha256": "42ff1df323780157baa374996f7f69f3fddbdd9a8348d3fcb4edd90dca393737",
+  "method": "Original source and two independent temporary mutated copies; no modification of canonical evidence",
+  "baseline": {
+    "exit": 0,
+    "f0001": {
+      "total": 7,
+      "passed": 7,
+      "failed": 0,
+      "internal_status": "PASS"
+    },
+    "master": {
+      "blocks_run": 32,
+      "blocks_passed": 32,
+      "blocks_failed": 0,
+      "global_consistency": "PASS",
+      "constants_registered": []
+    },
+    "all_31_reporting_modules_passed_steps": 334,
+    "all_31_reporting_modules_failed_steps": 0,
+    "reporting_module_count": 31
+  },
+  "false_expected_value": {
+    "modification": "F0001 Step 1 expected symbolic expression m*xdot + 1 rather than m*xdot",
+    "exit": 0,
+    "f0001": {
+      "total": 7,
+      "passed": 6,
+      "failed": 1,
+      "internal_status": "FAIL"
+    },
+    "master": {
+      "blocks_run": 32,
+      "blocks_passed": 32,
+      "blocks_failed": 0,
+      "global_consistency": "PASS",
+      "constants_registered": []
+    }
+  },
+  "raised_exception_positive_control": {
+    "modification": "Raise AssertionError upon entering F0001 run()",
+    "exit": 1,
+    "f0001_status": "FAIL",
+    "master_blocks_passed": 31,
+    "master_blocks_failed": 1
+  },
+  "conclusion": "The master runner reports PASS when a module reports subcheck FAIL but returns normally; it detects exceptions. Original modules did not report subcheck failures in our unmodified run.",
+  "scope": "The result tests audit failure propagation, not the physical truth of VMS or the private Mathematical Bridge counterexample.",
+  "reproducer": "https://physics.transductive.science/people/virgil-waters/audit-runner-integrity/reproduce.py"
+}

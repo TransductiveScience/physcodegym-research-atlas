@@ -886,6 +886,76 @@
       "url": "https://physics.transductive.science/tools/hash-verifier/",
       "title": "Local SHA-256 reference-video verifier",
       "topic": "Tool / Exact benchmark reference verification"
+    },
+    {
+      "url": "https://physics.transductive.science/organizations/vms-institute/",
+      "title": "VMS Institute",
+      "topic": "Organization / research enterprise"
+    },
+    {
+      "url": "https://physics.transductive.science/people/virgil-waters/",
+      "title": "Virgil Waters",
+      "topic": "Person / public research record"
+    },
+    {
+      "url": "https://physics.transductive.science/organizations/vms-institute/publications/",
+      "title": "Publications & theory",
+      "topic": "Institution / 35-document catalogue"
+    },
+    {
+      "url": "https://physics.transductive.science/organizations/vms-institute/audits/",
+      "title": "Audits & verification",
+      "topic": "Institution / 32 CAS blocks and 150 sheets"
+    },
+    {
+      "url": "https://physics.transductive.science/organizations/vms-institute/experiments/",
+      "title": "Experiments & datasets",
+      "topic": "Institution / optical bench and SPARC"
+    },
+    {
+      "url": "https://physics.transductive.science/organizations/vms-institute/research-program/",
+      "title": "Applied research program",
+      "topic": "Institution / 31 applied-sciences branches"
+    },
+    {
+      "url": "https://physics.transductive.science/organizations/vms-institute/patents/",
+      "title": "Patents & licensing",
+      "topic": "Institution / published filing records"
+    },
+    {
+      "url": "https://physics.transductive.science/organizations/vms-institute/challenge/",
+      "title": "The $50,000 VMS Challenge",
+      "topic": "Institution / provisional falsification rules"
+    },
+    {
+      "url": "https://physics.transductive.science/organizations/vms-institute/institute/",
+      "title": "Organization, funding & reach",
+      "topic": "Institution / public identity and operations"
+    },
+    {
+      "url": "https://physics.transductive.science/organizations/vms-institute/ai-loader/",
+      "title": "Artificial Intelligence Loader",
+      "topic": "Institution / knowledge packaging"
+    },
+    {
+      "url": "https://physics.transductive.science/organizations/vms-institute/mathematical-bridge/",
+      "title": "Mathematical Bridge: source map",
+      "topic": "Institution / derivation map"
+    },
+    {
+      "url": "https://physics.transductive.science/organizations/vms-institute/calibration/",
+      "title": "Calibration and prediction anchors",
+      "topic": "Institution / calibration provenance"
+    },
+    {
+      "url": "https://physics.transductive.science/people/virgil-waters/derivation-review/",
+      "title": "Derivation review: audit coverage",
+      "topic": "Individual / audit-scope examination"
+    },
+    {
+      "url": "https://physics.transductive.science/people/virgil-waters/audit-runner-integrity/",
+      "title": "When 32 green lights miss a failing check",
+      "topic": "Independent code audit / controlled fault injection"
     }
   ]
 }
