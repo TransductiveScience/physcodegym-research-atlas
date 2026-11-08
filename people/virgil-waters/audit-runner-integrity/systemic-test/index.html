@@ -1,0 +1,100 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#e9e8e2">
+<title>31 failures, 32 green lights · Transductive Science</title><meta name="description" content="A controlled fault-injection test of every counter-based VMS SymPy audit module, with a strict independent verdict and complete runnable evidence.">
+<link rel="canonical" href="https://physics.transductive.science/people/virgil-waters/audit-runner-integrity/systemic-test/"><link rel="stylesheet" href="/assets/style.css"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article"><meta property="og:title" content="31 failures, 32 green lights"><meta property="og:description" content="A controlled fault-injection test of every counter-based VMS SymPy audit module, with a strict independent verdict and complete runnable evidence."></head>
+<body><a class="skip" href="#content">Skip to article</a>
+<header class="topbar"><a class="brand" href="/"><span class="brand-glyph">T<span>⋮</span>S</span><span>TRANSDUCTIVE<br><b>SCIENCE / PHYSICS</b></span></a>
+<nav class="primary-nav" aria-label="Primary"><a href="/">Atlas</a><a href="/organizations/vms-institute/">Institute</a><a href="/people/virgil-waters/">Researcher</a><a href="/people/virgil-waters/audit-runner-integrity/">Audit case</a></nav>
+<a class="source-link" href="https://www.vms-institute.org/audit/" rel="noopener">OFFICIAL AUDIT ↗</a></header>
+<div class="readout"><span>RESEARCH / NEGATIVE-CONTROL STUDY</span><span>08 NOV 2026</span><span>REPRODUCED ON i9ES</span></div>
+<div class="site-grid"><main id="content">
+<header class="article-hero"><p class="eyebrow">Independent verification / full-suite failure propagation</p><h1>31 failures. 32 green lights.</h1>
+<p class="dek">A controlled fault-injection test of every counter-based VMS SymPy audit module, with a strict independent verdict and complete runnable evidence.</p></header>
+<article class="body-copy">
+<section id="finding"><p class="eyebrow">Finding / experiment completed</p><h2>A systematic fault-injection test</h2>
+<p>The published VMS Institute audit contains 32 modules. The first uses Python assertions; the other 31 perform symbolic/numerical checks and accumulate their failures in a module-local counter. We inserted precisely one <strong>synthetic failed check</strong> into each of the 31 counter-based modules, in a fresh disposable copy. Their original mathematical calculations were left unchanged.</p>
+<p>Every modified module subsequently reported a local FAIL. Nevertheless, the original, unmodified master runner reported <strong>32 passing blocks, zero failed blocks, and exit code 0</strong>. This extends the earlier single-module test to every counter-based module. It establishes a failure-reporting defect, not the invalidity of the original calculations.</p>
+<div class="sequence"><div><b>31 / 31</b><strong>Local failures</strong><p>Each counter-based module detects the inserted failure.</p></div><div><b>32 / 32</b><strong>Master PASS</strong><p>Unchanged master still reports a completely green run.</p></div><div><b>0</b><strong>Exit code</strong><p>Operating system sees success despite failed checks.</p></div><div><b>FAIL</b><strong>Strict verdict</strong><p>Independent validator rejects the mutated run.</p></div></div>
+</section>
+<section id="method"><p class="eyebrow">Method / explicit controls</p><h2>What was changed and what was preserved</h2>
+<p>The official <a href="https://www.vms-institute.org/audit/vms-sympy-audit.zip">SymPy ZIP</a> was downloaded and accepted only if its SHA-256 exactly matched the pinned original. Two fresh temporary directories were then used: one for the original and one for the all-module negative control.</p>
+<p>After each module's <code>total_steps = 0</code> initialization, the mutation adds one synthetic step to <code>total_steps</code> and one synthetic failure to <code>fail_count</code>. This preserves the accounting invariant that reported total steps equal reported passes plus reported failures. The other statements and mathematical tests remain unchanged. F0000 was not modified.</p>
+<p>The experiment is deliberately artificial: it asks whether <em>a failure that the module itself records</em> is visible to the master audit. The test does not manufacture false mathematical evidence against a physical theory.</p>
+<table><thead><tr><th>Measure</th><th>Unmodified baseline</th><th>31-module injection</th></tr></thead><tbody>
+<tr><td>Reported passing subchecks</td><td>334</td><td>334</td></tr>
+<tr><td>Reported failing subchecks</td><td>0</td><td>31</td></tr>
+<tr><td>Total reported subchecks</td><td>334</td><td>365</td></tr>
+<tr><td>Master PASS count</td><td>32</td><td>32</td></tr>
+<tr><td>Master FAIL count</td><td>0</td><td>0</td></tr>
+<tr><td>Master exit code</td><td>0</td><td>0</td></tr>
+<tr><td>Strict independent status</td><td><strong>INCOMPLETE</strong></td><td><strong>FAIL</strong></td></tr>
+</tbody></table>
+<p>The baseline is marked <strong>INCOMPLETE</strong>, rather than FAIL, by the strict validator because three declared cross-block identity checks were skipped. It is not classified as a mathematical contradiction.</p></section>
+<section id="modules"><p class="eyebrow">31-member inventory / every altered module</p><h2>Local FAIL, master PASS</h2>
+<p>The table exposes the per-module outcome captured in the machine-readable evidence. Each local FAIL was generated by an additional synthetic check. The per-module numbers are available without truncation in <a href="results.json">results.json</a>.</p>
+<table><thead><tr><th>Module</th><th>Original checks</th><th>Modified module</th><th>Master verdict</th></tr></thead><tbody><tr><td><code>F0001</code></td><td>7/7 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0002</code></td><td>10/10 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0003</code></td><td>8/8 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0004</code></td><td>12/12 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0005</code></td><td>8/8 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0006</code></td><td>10/10 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0007</code></td><td>11/11 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0008</code></td><td>14/14 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0009</code></td><td>11/11 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0010</code></td><td>12/12 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0011</code></td><td>11/11 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0012</code></td><td>11/11 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0013</code></td><td>10/10 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0014</code></td><td>10/10 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0015</code></td><td>11/11 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0016</code></td><td>11/11 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0017</code></td><td>10/10 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0018</code></td><td>10/10 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0019</code></td><td>10/10 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0020</code></td><td>12/12 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0021</code></td><td>14/14 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0022</code></td><td>13/13 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0023</code></td><td>13/13 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0024</code></td><td>10/10 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0025</code></td><td>9/9 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0026</code></td><td>11/11 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0027</code></td><td>11/11 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0028</code></td><td>11/11 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0029</code></td><td>11/11 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0030</code></td><td>11/11 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr>
+<tr><td><code>F0031</code></td><td>11/11 PASS</td><td>FAIL: 1 injected</td><td>PASS</td></tr></tbody></table>
+<p>F0000 remains outside this table because it uses Python assertions rather than the nonthrowing counter pattern. A separate exception-control experiment previously confirmed that the master correctly handles a raised exception.</p></section>
+<section id="global"><p class="eyebrow">Global checks / prerequisites</p><h2>A separate completeness defect</h2>
+<p>The common <code>constants.py</code> registry is empty in both runs. Its three cross-block identity checks are therefore skipped, yet <code>Global: PASS</code> remains displayed. No module in the downloaded package calls the shared constant-registration function. An honest machine report should distinguish an untested global identity from a successfully verified one.</p>
+<table><thead><tr><th>Check</th><th>Original runner output</th></tr></thead><tbody>
+<tr><td><code>c²ε₀μ₀ = 1</code></td><td>SKIP</td></tr>
+<tr><td><code>ħ = h/(2π)</code></td><td>SKIP</td></tr>
+<tr><td>Stefan–Boltzmann coefficient</td><td>SKIP</td></tr>
+</tbody></table>
+</section>
+<section id="strict"><p class="eyebrow">Engineering response / drop-in independent layer</p><h2>A strict machine verdict</h2>
+<p>The accompanying <a href="reproduce.py">Python reproduction and strict-audit script</a> parses the 31 internal check summaries and the F0000 assertion marker, verifies module completeness and counter arithmetic, checks the master report, and marks missing global prerequisite checks as incomplete. It returns <strong>FAIL</strong> for any reported failed subcheck, even if the author's master runner says PASS.</p>
+<p>Reproducing the experiment requires Python and SymPy and executes the publisher's downloaded code after verifying the pinned SHA-256. Review external code and use a disposable VM if isolation is necessary. The script does not edit the preserved original archive or any private mathematical-break submission.</p>
+<p><a class="readmore" href="reproduce.py">Download reproducer and strict verifier →</a> · <a href="results.json">Complete machine results →</a></p></section>
+<section id="meaning"><p class="eyebrow">Limits / research ethics</p><h2>What this result cannot prove</h2>
+<p>It does not prove that any of the 334 ordinary baseline checks failed. It does not evaluate every proposition in the VMS Mathematical Bridge, nor establish that the theoretical ontology is mathematically impossible. It demonstrates that the public audit's final PASS signal is insufficiently coupled to the error counters inside the verified modules, and that its global identity checks were not run.</p>
+<p>The original <a href="/people/virgil-waters/audit-runner-integrity/">single-module experiment</a> includes an independently injected <em>incorrect expected algebraic result</em>, and an exception-control test. The present full-suite experiment confirms that the same reporting defect applies to all 31 counter-based modules.</p>
+<p>Detailed, unreleased evidence concerning the Mathematical Bridge's differential-form claims is outside the scope of this page and remains private pending clarification of the institute's challenge rules.</p>
+</section>
+</article>
+<div class="bibliography"><p class="eyebrow">Exact evidence and chronology</p>
+<a href="results.json">Systemic negative-control evidence (JSON) →</a>
+<a href="reproduce.py">Independent reproduction and verdict code (Python) →</a>
+<a href="https://www.vms-institute.org/audit/vms-sympy-audit.zip">Institute's authoritative audit ZIP ↗</a>
+<a href="/people/virgil-waters/derivation-review/audit-coverage.json">Per-module source checksums and inventory →</a>
+<a href="/people/virgil-waters/audit-runner-integrity/">Earlier three-run mutation study →</a>
+</div><div class="afterword"><a href="/people/virgil-waters/">Researcher record</a><a href="/organizations/vms-institute/audits/">Institutional audit overview</a></div></main>
+<aside class="rail" aria-label="Dossier navigation"><div class="rail-top"><span>CAS AUDIT / EVIDENCE</span><span>2026.11.08</span></div><h2>Verified artifacts</h2><ul>
+<li><a href="/people/virgil-waters/audit-runner-integrity/systemic-test/"><small>Full suite / present study</small>31 failures, 32 green lights</a></li>
+<li><a href="/people/virgil-waters/audit-runner-integrity/systemic-test/results.json"><small>Source data</small>All 31 module outcomes</a></li>
+<li><a href="/people/virgil-waters/audit-runner-integrity/systemic-test/reproduce.py"><small>Independent executable</small>Strict checker and fault injection</a></li>
+<li><a href="/people/virgil-waters/audit-runner-integrity/"><small>Earlier study</small>Single-module reproduction</a></li>
+<li><a href="/people/virgil-waters/derivation-review/"><small>Claim coverage</small>What the audit tests</a></li>
+<li><a href="/organizations/vms-institute/"><small>Institutional directory</small>VMS Institute</a></li>
+</ul><div class="rail-bottom"><span class="rail-dot"></span> Error reporting is a testable software property.</div></aside></div>
+<footer><span>TRANSDUCTIVE SCIENCE · INDEPENDENT RESEARCH</span><a href="https://physics.transductive.science/people/virgil-waters/audit-runner-integrity/systemic-test/">PERMALINK ↗</a><span>CAPTURED 2026-11-08</span></footer></body></html>

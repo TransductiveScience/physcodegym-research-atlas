@@ -11,7 +11,7 @@
 <header class="article-hero"><p class="eyebrow">Audit apparatus / fault injection / source-preserving investigation</p>
 <h1>When 32 green lights miss a failing check</h1>
 <p class="dek">The official VMS symbolic-audit master can report “32 PASS” even when one of its own modules explicitly reports “FAIL.” A controlled mutation test demonstrates exactly how.</p></header>
-<article class="body-copy">
+<article class="body-copy"><section id="systemic-mutation"><p class="eyebrow">New / full-suite fault injection</p><h2>31 module failures, 32 master passes</h2><p>We extended the single-module negative control to every counter-based CAS module. Each of F0001–F0031 reported one injected failed check, but the unmodified master still reported 32 green blocks. The source-preserving <a href="/people/virgil-waters/audit-runner-integrity/systemic-test/">systemic test</a> includes a strict independent verdict, per-module results and a reproduction script.</p></section>
 <section id="verdict"><p class="eyebrow">Result / three controlled runs</p>
 <h2>The same runner, three different outcomes</h2>
 <p>We downloaded the institute's official SymPy audit ZIP and verified its SHA-256. Three tests used independent temporary extractions. The original archive was never edited. One run preserved the original code; a second deliberately corrupted a single expected result inside module F0001; a third deliberately raised an exception as a positive control.</p>
@@ -63,5 +63,5 @@
 <li><a href="/people/virgil-waters/derivation-review/"><small>Previous examination</small>32-module scope inventory</a></li>
 <li><a href="/organizations/vms-institute/mathematical-bridge/"><small>Source map</small>Mathematical Bridge</a></li>
 <li><a href="/organizations/vms-institute/audits/"><small>Institution</small>Published audits</a></li>
-</ul><div class="rail-bottom"><span class="rail-dot"></span> Evaluate claims, preserve originals, publish counterchecks.</div></aside></div>
+<li><a href="/people/virgil-waters/audit-runner-integrity/systemic-test/"><small>Full-suite control experiment</small>31 failures / 32 green lights</a></li></ul><div class="rail-bottom"><span class="rail-dot"></span> Evaluate claims, preserve originals, publish counterchecks.</div></aside></div>
 <footer><span>TRANSDUCTIVE SCIENCE · SOURCE-PRESERVING RESEARCH</span><a href="https://physics.transductive.science/people/virgil-waters/audit-runner-integrity/">PERMALINK ↗</a><span>08 NOV 2026</span></footer></body></html>

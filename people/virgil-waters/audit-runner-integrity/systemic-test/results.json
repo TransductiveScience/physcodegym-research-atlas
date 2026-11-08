@@ -1,0 +1,544 @@
+{
+  "generated_at": "2026-11-08T19:35:22.603923+00:00",
+  "original_zip": "https://www.vms-institute.org/audit/vms-sympy-audit.zip",
+  "original_zip_sha256": "42ff1df323780157baa374996f7f69f3fddbdd9a8348d3fcb4edd90dca393737",
+  "python_version": "3.12.3",
+  "sympy_version": "1.12",
+  "finding": "All 31 reporting modules can report one synthetic failed subcheck yet the unmodified master reports 32 passing modules.",
+  "scope": "Fail-status propagation and skipped global checks; not proof that original calculations fail.",
+  "baseline": {
+    "case": "original",
+    "mutation": "none",
+    "injected_modules": [],
+    "master_exit_code": 0,
+    "master_blocks_passed": 32,
+    "master_blocks_failed": 0,
+    "master_global": "PASS",
+    "master_result_for_each_block": {
+      "F0000": "PASS",
+      "F0001": "PASS",
+      "F0002": "PASS",
+      "F0003": "PASS",
+      "F0004": "PASS",
+      "F0005": "PASS",
+      "F0006": "PASS",
+      "F0007": "PASS",
+      "F0008": "PASS",
+      "F0009": "PASS",
+      "F0010": "PASS",
+      "F0011": "PASS",
+      "F0012": "PASS",
+      "F0013": "PASS",
+      "F0014": "PASS",
+      "F0015": "PASS",
+      "F0016": "PASS",
+      "F0017": "PASS",
+      "F0018": "PASS",
+      "F0019": "PASS",
+      "F0020": "PASS",
+      "F0021": "PASS",
+      "F0022": "PASS",
+      "F0023": "PASS",
+      "F0024": "PASS",
+      "F0025": "PASS",
+      "F0026": "PASS",
+      "F0027": "PASS",
+      "F0028": "PASS",
+      "F0029": "PASS",
+      "F0030": "PASS",
+      "F0031": "PASS"
+    },
+    "strict_verdict": {
+      "status": "INCOMPLETE",
+      "internal_checks": 334,
+      "internal_pass": 334,
+      "internal_fail": 0,
+      "modules_raising_no_exception": 31,
+      "count_inconsistencies": [],
+      "status_inconsistencies": [],
+      "global_identity_lines": [
+        "c^2*eps0*mu0=1 : SKIP",
+        "hbar=h/(2pi)   : SKIP",
+        "sigma formula  : SKIP"
+      ],
+      "global_checks_skipped": 3,
+      "global_checks_failed": 0,
+      "registered_constants": [],
+      "module_outcomes": {
+        "F0001": {
+          "checks": 7,
+          "passed": 7,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0002": {
+          "checks": 10,
+          "passed": 10,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0003": {
+          "checks": 8,
+          "passed": 8,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0004": {
+          "checks": 12,
+          "passed": 12,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0005": {
+          "checks": 8,
+          "passed": 8,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0006": {
+          "checks": 10,
+          "passed": 10,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0007": {
+          "checks": 11,
+          "passed": 11,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0008": {
+          "checks": 14,
+          "passed": 14,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0009": {
+          "checks": 11,
+          "passed": 11,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0010": {
+          "checks": 12,
+          "passed": 12,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0011": {
+          "checks": 11,
+          "passed": 11,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0012": {
+          "checks": 11,
+          "passed": 11,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0013": {
+          "checks": 10,
+          "passed": 10,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0014": {
+          "checks": 10,
+          "passed": 10,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0015": {
+          "checks": 11,
+          "passed": 11,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0016": {
+          "checks": 11,
+          "passed": 11,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0017": {
+          "checks": 10,
+          "passed": 10,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0018": {
+          "checks": 10,
+          "passed": 10,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0019": {
+          "checks": 10,
+          "passed": 10,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0020": {
+          "checks": 12,
+          "passed": 12,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0021": {
+          "checks": 14,
+          "passed": 14,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0022": {
+          "checks": 13,
+          "passed": 13,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0023": {
+          "checks": 13,
+          "passed": 13,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0024": {
+          "checks": 10,
+          "passed": 10,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0025": {
+          "checks": 9,
+          "passed": 9,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0026": {
+          "checks": 11,
+          "passed": 11,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0027": {
+          "checks": 11,
+          "passed": 11,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0028": {
+          "checks": 11,
+          "passed": 11,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0029": {
+          "checks": 11,
+          "passed": 11,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0030": {
+          "checks": 11,
+          "passed": 11,
+          "failed": 0,
+          "internal_status": "PASS"
+        },
+        "F0031": {
+          "checks": 11,
+          "passed": 11,
+          "failed": 0,
+          "internal_status": "PASS"
+        }
+      }
+    },
+    "stdout_sha256": "3d2287f0650344cb3c4d67f50e43b1079d64a948dabf2e67cbfd56173d6c73fd",
+    "stderr_tail": "",
+    "master_summary": "  hbar=h/(2pi)   : SKIP\n  sigma formula  : SKIP\n\n=== SUMMARY ===\nBlocks: 32 PASS, 0 FAIL\nGlobal: PASS\nElapsed: 16.1s\n\nSTACK CLOSED: 32 green lights (F0000–F0031) + global closure.\n\nReport written to: audit_report.json"
+  },
+  "systemic_mutation": {
+    "case": "all_31_modules_report_synthetic_failure",
+    "mutation": "synthetic failed step added to each reporting module",
+    "injected_modules": [
+      "F0001",
+      "F0002",
+      "F0003",
+      "F0004",
+      "F0005",
+      "F0006",
+      "F0007",
+      "F0008",
+      "F0009",
+      "F0010",
+      "F0011",
+      "F0012",
+      "F0013",
+      "F0014",
+      "F0015",
+      "F0016",
+      "F0017",
+      "F0018",
+      "F0019",
+      "F0020",
+      "F0021",
+      "F0022",
+      "F0023",
+      "F0024",
+      "F0025",
+      "F0026",
+      "F0027",
+      "F0028",
+      "F0029",
+      "F0030",
+      "F0031"
+    ],
+    "master_exit_code": 0,
+    "master_blocks_passed": 32,
+    "master_blocks_failed": 0,
+    "master_global": "PASS",
+    "master_result_for_each_block": {
+      "F0000": "PASS",
+      "F0001": "PASS",
+      "F0002": "PASS",
+      "F0003": "PASS",
+      "F0004": "PASS",
+      "F0005": "PASS",
+      "F0006": "PASS",
+      "F0007": "PASS",
+      "F0008": "PASS",
+      "F0009": "PASS",
+      "F0010": "PASS",
+      "F0011": "PASS",
+      "F0012": "PASS",
+      "F0013": "PASS",
+      "F0014": "PASS",
+      "F0015": "PASS",
+      "F0016": "PASS",
+      "F0017": "PASS",
+      "F0018": "PASS",
+      "F0019": "PASS",
+      "F0020": "PASS",
+      "F0021": "PASS",
+      "F0022": "PASS",
+      "F0023": "PASS",
+      "F0024": "PASS",
+      "F0025": "PASS",
+      "F0026": "PASS",
+      "F0027": "PASS",
+      "F0028": "PASS",
+      "F0029": "PASS",
+      "F0030": "PASS",
+      "F0031": "PASS"
+    },
+    "strict_verdict": {
+      "status": "FAIL",
+      "internal_checks": 365,
+      "internal_pass": 334,
+      "internal_fail": 31,
+      "modules_raising_no_exception": 31,
+      "count_inconsistencies": [],
+      "status_inconsistencies": [],
+      "global_identity_lines": [
+        "c^2*eps0*mu0=1 : SKIP",
+        "hbar=h/(2pi)   : SKIP",
+        "sigma formula  : SKIP"
+      ],
+      "global_checks_skipped": 3,
+      "global_checks_failed": 0,
+      "registered_constants": [],
+      "module_outcomes": {
+        "F0001": {
+          "checks": 8,
+          "passed": 7,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0002": {
+          "checks": 11,
+          "passed": 10,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0003": {
+          "checks": 9,
+          "passed": 8,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0004": {
+          "checks": 13,
+          "passed": 12,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0005": {
+          "checks": 9,
+          "passed": 8,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0006": {
+          "checks": 11,
+          "passed": 10,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0007": {
+          "checks": 12,
+          "passed": 11,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0008": {
+          "checks": 15,
+          "passed": 14,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0009": {
+          "checks": 12,
+          "passed": 11,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0010": {
+          "checks": 13,
+          "passed": 12,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0011": {
+          "checks": 12,
+          "passed": 11,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0012": {
+          "checks": 12,
+          "passed": 11,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0013": {
+          "checks": 11,
+          "passed": 10,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0014": {
+          "checks": 11,
+          "passed": 10,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0015": {
+          "checks": 12,
+          "passed": 11,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0016": {
+          "checks": 12,
+          "passed": 11,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0017": {
+          "checks": 11,
+          "passed": 10,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0018": {
+          "checks": 11,
+          "passed": 10,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0019": {
+          "checks": 11,
+          "passed": 10,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0020": {
+          "checks": 13,
+          "passed": 12,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0021": {
+          "checks": 15,
+          "passed": 14,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0022": {
+          "checks": 14,
+          "passed": 13,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0023": {
+          "checks": 14,
+          "passed": 13,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0024": {
+          "checks": 11,
+          "passed": 10,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0025": {
+          "checks": 10,
+          "passed": 9,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0026": {
+          "checks": 12,
+          "passed": 11,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0027": {
+          "checks": 12,
+          "passed": 11,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0028": {
+          "checks": 12,
+          "passed": 11,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0029": {
+          "checks": 12,
+          "passed": 11,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0030": {
+          "checks": 12,
+          "passed": 11,
+          "failed": 1,
+          "internal_status": "FAIL"
+        },
+        "F0031": {
+          "checks": 12,
+          "passed": 11,
+          "failed": 1,
+          "internal_status": "FAIL"
+        }
+      }
+    },
+    "stdout_sha256": "a335ede3d9a8dbfd940cac13f566acb7d16099de39b652cad2c4ec85f4f08328",
+    "stderr_tail": "",
+    "master_summary": "  hbar=h/(2pi)   : SKIP\n  sigma formula  : SKIP\n\n=== SUMMARY ===\nBlocks: 32 PASS, 0 FAIL\nGlobal: PASS\nElapsed: 15.7s\n\nSTACK CLOSED: 32 green lights (F0000–F0031) + global closure.\n\nReport written to: audit_report.json"
+  },
+  "conclusion_verified": true
+}

@@ -956,6 +956,11 @@
       "url": "https://physics.transductive.science/people/virgil-waters/audit-runner-integrity/",
       "title": "When 32 green lights miss a failing check",
       "topic": "Independent code audit / controlled fault injection"
+    },
+    {
+      "url": "https://physics.transductive.science/people/virgil-waters/audit-runner-integrity/systemic-test/",
+      "title": "31 failures, 32 green lights",
+      "topic": "Independent audit / full-suite negative control"
     }
   ]
 }
