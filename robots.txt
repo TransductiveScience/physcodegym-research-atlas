@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://physics.transductive.science/sitemap.xml

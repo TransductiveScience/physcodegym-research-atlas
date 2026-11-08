@@ -1,0 +1,891 @@
+{
+  "title": "Transductive Science · Physics Research Atlas",
+  "published": "2026-11-08",
+  "updated": "2026-11-08",
+  "origin": "https://physics.transductive.science",
+  "source_conversation": "https://chatgpt.com/c/6af0b330-ad88-83eb-ab31-3501375a3db5",
+  "repository": "https://github.com/TransductiveScience/PhysCodeGym",
+  "paper": "https://arxiv.org/abs/2610.17288",
+  "pages": [
+    {
+      "url": "https://physics.transductive.science/",
+      "title": "When simulations break physics",
+      "topic": "Field note 001 / 08 November 2026"
+    },
+    {
+      "url": "https://physics.transductive.science/anomalies/energy/",
+      "title": "The cradle that gained energy",
+      "topic": "Anomaly 01 / Energy budget"
+    },
+    {
+      "url": "https://physics.transductive.science/anomalies/penetration/",
+      "title": "A gripper inside solid material",
+      "topic": "Anomaly 02 / Contact"
+    },
+    {
+      "url": "https://physics.transductive.science/anomalies/invisible-support/",
+      "title": "Invisible geometry carrying the load",
+      "topic": "Anomaly 03 / Hidden contact"
+    },
+    {
+      "url": "https://physics.transductive.science/methods/counterfactuals/",
+      "title": "Change the experiment, expose the mechanism",
+      "topic": "Method 01 / Causal interrogation"
+    },
+    {
+      "url": "https://physics.transductive.science/methods/validity-scoring/",
+      "title": "How PhysCodeGym scores a physical world",
+      "topic": "Method 02 / Verification apparatus"
+    },
+    {
+      "url": "https://physics.transductive.science/results/agent-comparison/",
+      "title": "Better images, weaker physical explanations",
+      "topic": "Results / Models and execution harnesses"
+    },
+    {
+      "url": "https://physics.transductive.science/experiments/closed-loop/",
+      "title": "A laboratory that makes theories disagree",
+      "topic": "Research proposal / Beyond simulation"
+    },
+    {
+      "url": "https://physics.transductive.science/archive/sources/",
+      "title": "Sources, provenance and open questions",
+      "topic": "Archive / Evidence ledger"
+    },
+    {
+      "url": "https://physics.transductive.science/publication/",
+      "title": "Published, linked, and restartable",
+      "topic": "Publication record / Live deployment"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/",
+      "title": "156 benchmark reference cases",
+      "topic": "Corpus / Complete inventory"
+    },
+    {
+      "url": "https://physics.transductive.science/analysis/anomaly-atlas/",
+      "title": "An atlas of simulated physical anomalies",
+      "topic": "<section><h2>What has actually been observed?</h2><p>The paper reports quantitative defects in executable Blender scenes produced by coding agents. Those numbers are measurements of <em>submitted simulations</em>. They are not evidence that physical laws failed in a real experiment. The published case studies are illustrative selections, not a measured prevalence rate across all 156 tasks.</p><div class=\"note\"><b>A testable split</b><p>There are two different problems: an AI generates a physically invalid world, or the world itself behaves differently from a physical theory. PhysCodeGym addresses the first. A sensor-backed experimental program is necessary for the second.</p></div></section>\n<section><h2>Energy and hidden work</h2><table><thead><tr><th>Witness</th><th>Reported measurement</th><th>Inference permitted</th></tr></thead><tbody>\n<tr><td>Newton’s cradle · GPT-6-Astra · Fig. 16</td><td>4.971 mJ estimated initial total from four free-swing fits; 9.441 mJ gravitational potential at frame 236, after release at frame 85.</td><td>Passive energy budget inconsistent in the simulation. Not new physical energy generation.</td></tr>\n</tbody></table><p><a href=\"/anomalies/energy/\">Detailed energy-budget examination →</a></p></section>\n<section><h2>Solid material crossing other solid material</h2><table><thead><tr><th>Witness</th><th>Measured defect</th><th>Reference</th></tr></thead><tbody>\n<tr><td>Resting eggs · GPT-5.6-Sol</td><td>All nine resting eggs overlap the evaluated table surface across all 240 frames. Deepest below-surface vertices are 0.309–1.298 <em>scene units</em>.</td><td>Paper Figure 17</td></tr>\n<tr><td>Robotic gripper · DeepSeek-V4.1-Flash</td><td>Right jaw centre lies inside a solid block during frames 95–100; centre interior depth peaks at 46.3 mm on frame 99. This is not a general surface-penetration depth.</td><td>Paper Figure 18</td></tr>\n<tr><td>Crate resting on table · GLM-5.3-Flash</td><td>Floor/table overlap has bounding dimensions 0.51864 × 0.51864 × 0.05000 scene units; 57.47% of the crate-floor volume is embedded. Persists across all 240 frames.</td><td>Paper Figure 19</td></tr>\n<tr><td>Flag self-crossing · GPT-6-Luna</td><td>41 nonlocal triangle-pair intersections at frame 54 and 352 at frame 60, excluding nearby material-neighborhood pairs.</td><td>Paper Figure 21</td></tr>\n<tr><td>Cloth fold · Qwen3.8-Flash</td><td>Nonadjacent cloth regions intersect in 14 inspected frames even while the event rubric scores 1.</td><td>Paper Figure 15</td></tr>\n</tbody></table><p>These values are reported from source geometry. An ordinary RGB video need not reveal them. The relevant falsifier is a native mesh, signed-distance or collision-geometry inspection.</p></section>\n<section><h2>Invisible collision structures and absent constraints</h2><table><thead><tr><th>Intervention</th><th>Numerical or causal evidence</th><th>Meaning</th></tr></thead><tbody>\n<tr><td>Oversized collider · Claude Sonnet 5</td><td>2.59–2.89 mm sampled positive gap while support and traction remain active.</td><td>Proxy collision geometry and visible material diverge.</td></tr>\n<tr><td>Wooden piece redirected into dish · GPT-6-Astra</td><td>158 frames intersecting dish material, maximum intrusion 4.619 mm; removing dish leaves the candidate centre-of-mass trajectory unchanged.</td><td>Dish is not acting as expected collision geometry.</td></tr>\n<tr><td>Cue ball redirected past table edge · GPT-6-Astra</td><td>Ball fully beyond finite support from frame 117; at approximately 28.575 mm centre height for 124 samples. Infinite-support control exactly matches; finite-table control falls.</td><td>Hidden infinite support is implicated.</td></tr>\n<tr><td>Rotor hinge removed · DeepSeek-V4.1-Flash</td><td>Constraint removed at frame 120; table intersection frames 123–126, body below table bottom at frame 127.</td><td>Post-release contact handling is incorrect.</td></tr>\n<tr><td>Wooden game piece meets a knight · GPT-5.6-Sol</td><td>Two releases intersect knight meshes for 46 and 29 frames; maximum interior depths 0.295 and 0.105 scene units.</td><td>Visible obstruction lacks a collision owner.</td></tr>\n<tr><td>Rolling piece meets solid token · GPT-5.6-Luna</td><td>Two branches intersect a closed token cylinder for 32 consecutive frames each; approximately −0.110 scene-units signed distance; deleting token leaves trajectory unchanged.</td><td>Opaque visible obstacle fails as a physical obstacle.</td></tr>\n</tbody></table><p><a href=\"/analysis/counterfactual-witnesses/\">Read the intervention protocols →</a></p></section>\n<section><h2>Research conclusion</h2><p>Anomalies in an AI-generated reconstruction are powerful tools for finding <em>wrong models</em>. They become tools for discovering <em>new physics</em> only after the same disagreement survives a controlled experiment with independently measured real-world states. A reconstructed world should be asked to predict what happens <em>after an intervention it has not seen</em>.</p><a class=\"readmore\" href=\"/analysis/identifiability/\">Why one observed trajectory cannot determine a law →</a></section>"
+    },
+    {
+      "url": "https://physics.transductive.science/analysis/counterfactual-witnesses/",
+      "title": "Five interventions that broke the illusion",
+      "topic": "<section><h2>The intervention is the measurement instrument</h2><p>Rather than asking an agent to produce prettier pixels, reconstruct a physically meaningful alternative trial while retaining the same authored scene. A change in initial position, support or constraint reveals whether the program actually contains the mechanism it claims.</p></section>\n<section><h2>01 · Move the wooden piece into a dish</h2><p>A GPT-6-Astra reconstruction is challenged with an altered release: the wooden piece begins 32.25 mm clear of the dish, then passes through the actual three-dimensional dish material for 158 frames, reaching a reported maximum interior depth of 4.619 mm. Removing the dish leaves the reported centre-of-mass trajectory unchanged.</p><p>What this discriminates: collision support from an independently simulated surface versus movement unaffected by that surface. <a href=\"/cases/newgap_wooden_piece_rolls/\">Reference case metadata →</a></p></section>\n<section><h2>02 · Drive a billiard ball beyond the table</h2><p>The cue ball envelope clears the support boundary at y = 1.100 m starting at frame 117. It stays suspended at about 28.575 mm height for 124 samples. The author's infinite-support control reproduces the anomalous path; restricting support to the finite tabletop preserves the pre-edge prefix, then the ball falls.</p><p>What this discriminates: physically finite support versus an unbounded hidden support plane. <a href=\"/cases/newgap_billiards_cue_strike/\">Reference billiards task →</a></p></section>\n<section><h2>03 · Disconnect the rotor’s base hinge</h2><p>DeepSeek-V4.1-Flash (max effort) is tested by removing the sole base-to-beam hinge after the original setup. The intervention preserves the original trajectory through frame 120, then produces a table intersection across frames 123–126 and a body below the table bottom at frame 127. The intended test concerns actual contact following release, not merely whether the hinge object was declared.</p></section>\n<section><h2>04 · Roll toward the chess knight</h2><p>Two altered releases place a rolling object inside a nearby closed knight assembly for 46 and 29 frames. The observed maximum inward vertex depths are 0.295 and 0.105 scene units, respectively. The implicated knight meshes have no active collision owner in the submitted scene. These are two reruns of a model, not laboratory trials.</p></section>\n<section><h2>05 · Send the piece through a wooden token</h2><p>A closed cylindrical obstacle lacking a physical contact owner is encountered on frames 114–145 and 118–149 in two branches (32 consecutive frames each). The minimum signed distance approaches −0.110 scene units. Removing the token does not change the sampled 240-frame trajectory in the indicated branch.</p></section>\n<section><h2>How to strengthen each result</h2><ol><li>Pin the original program and video hashes.</li><li>Preserve the original setup and an independently physical control.</li><li>Define the intervention before evaluating outcomes.</li><li>Measure signed distances, constraint violations or a complete energy budget instead of trusting an image.</li><li>Repeat at multiple solver substep settings and document failure caps, uncertainties and numerical artifacts.</li></ol><p>These descriptions paraphrase the paper's Figures 22–26. They are examples; the paper does not report a statistically representative failure frequency from these selected scenes.</p></section>"
+    },
+    {
+      "url": "https://physics.transductive.science/analysis/data-provenance/",
+      "title": "Where the 156 videos came from",
+      "topic": "<section><h2>Four physical domains</h2><div class=\"metric-grid\"><div class=\"metric\"><span class=\"metric-label\">Rigid bodies</span><strong>95</strong><span>Rolling, drops, impacts, constraints, rotation and tracks.</span></div><div class=\"metric\"><span class=\"metric-label\">Fluids</span><strong>40</strong><span>Pouring, splashing, fill level and liquid-object interactions.</span></div><div class=\"metric\"><span class=\"metric-label\">Cloth</span><strong>12</strong><span>Deformation, hanging material, folding and membrane behavior.</span></div><div class=\"metric\"><span class=\"metric-label\">Wind</span><strong>9</strong><span>Airflow-driven movement of flexible materials and objects.</span></div></div></section>\n<section><h2>Four upstream collections</h2><table><thead><tr><th>Source</th><th>Clips</th><th>Rights</th></tr></thead><tbody><tr><td>Pexels</td><td>122</td><td>Per-record Pexels License; see provenance metadata.</td></tr><tr><td>Physics-IQ (DeepMind)</td><td>27</td><td>Per-record CC BY 4.0 in the benchmark manifest.</td></tr><tr><td>BAAI Physics-aware-videos</td><td>5</td><td>See the exact per-clip license entry.</td></tr><tr><td>IRIS</td><td>2</td><td>See the exact per-clip license entry.</td></tr></tbody></table><p>The source counts are computed from all 156 entries of the published JSON manifest, not inferred from paper pictures. Individual case pages retain links, titles where provided, license fields, reference checksums and file sizes.</p></section>\n<section><h2>What is standardized?</h2><p>Every reference has 240 frames at 30 fps, a nominal eight-second duration and a reported resolution of 3840 × 2160. The manifest records individual SHA-256 hashes and video sizes. Its aggregate clip size is <strong>1,517,045,206 bytes</strong>, approximately <strong>1.52 GB</strong> decimal.</p><p>An independently retrieved upstream video may have a different bitstream or edit than the benchmark’s standardized clip. A reproducible scorer must validate the <em>benchmark reference hash</em> before comparing pixels or timing.</p></section>\n<section><h2>Generated reconstruction release</h2><p>The Hugging Face dataset card also describes <strong>3,065 generated reconstruction videos</strong> with associated submitted Blender programs. Generated clips use 640 × 360, 240-frame output. Their metadata links each trial to requested model, harness, reasoning effort, task ID and artifact hashes. This is separate from the original 156 4K reference clips.</p><p>Access to a generated program still does not certify physical validity. Some submissions need auxiliary assets or their original Blender execution environment, and historical experiment configurations are not represented equally.</p></section>\n<section><h2>Reproducibility and licensing boundaries</h2><ol><li>Read the exact case manifest and inspect the recorded source and license before reuse.</li><li>Download only the references you need; use the included hash checks instead of trusting a file name.</li><li>Save model-generated code, state, frame timings and evaluator traces as distinct artifacts.</li><li>Never treat the repository’s MIT code license as permission to republish every third-party reference video.</li></ol><p><a href=\"/data/case-manifest-snapshot.json\">Machine-readable manifest snapshot →</a> · <a href=\"/data/cases.csv\">CSV case index →</a> · <a href=\"/cases/\">Explore every reference task →</a></p></section>"
+    },
+    {
+      "url": "https://physics.transductive.science/analysis/benchmark-comparison/",
+      "title": "Three tests of physical understanding",
+      "topic": "<section><h2>A taxonomy, not a ranking</h2><table><thead><tr><th>Benchmark</th><th>Test object</th><th>Primary measurement</th></tr></thead><tbody><tr><td><strong>PhysCodeGym</strong> (2026)</td><td>156 reference videos, agents produce Blender simulation programs.</td><td>Visual, event, motion and native physical validity, including 43 counterfactual tasks.</td></tr><tr><td><strong>4DCodeBench</strong> (2026)</td><td>200 videos: 100 real-world and 100 synthetic. Agents write executable dynamic scene code.</td><td>Appearance, geometry and motion using flow, dynamic masks, trajectories and feature-space metrics, with mesh-quality checks.</td></tr><tr><td><strong>Physics-IQ</strong> (2025–26 benchmark)</td><td>Real experimental video scenarios used to assess generated-video physical realism.</td><td>Physically plausible video generation under varied conditions, rather than program-level native-state inspection.</td></tr></tbody></table><p>These are descriptions of different evaluation protocols. Numerical scores do not share a common scale and cannot be compared directly.</p></section>\n<section><h2>Where PhysCodeGym adds leverage</h2><p>4DCodeBench allows code that describes or prescribes trajectories. Its primary question is how accurately an executable graphics model reconstructs observed dynamics. PhysCodeGym more explicitly tests whether the motion is generated by declared physics mechanisms and whether those mechanisms survive changed conditions.</p><p>4DCodeBench is nevertheless important because it provides a mix of real and synthetic source videos and uses additional geometry/trajectory measurements. It also exposes the same bottleneck: motion is harder than static appearance.</p></section>\n<section><h2>The bridge that is still missing</h2><p>None of these benchmarks, by themselves, discovers a new physical law. Their outputs should feed an experimental loop that chooses conditions maximizing disagreement between candidate hypotheses, then measures the real outcome with calibrated sensors. A physically plausible reconstructed scene is an <em>experimental hypothesis</em>, not the experimentally verified mechanism.</p></section>\n<section><h2>Research sources</h2><p><a href=\"https://arxiv.org/abs/2610.03715\">4DCodeBench paper (arXiv:2610.03715) ↗</a> · <a href=\"https://github.com/4DCodeBench/4DCodeBench\">4DCodeBench repository ↗</a> · <a href=\"https://github.com/google-deepmind/physics-IQ-benchmark\">Physics-IQ repository ↗</a>.</p></section>"
+    },
+    {
+      "url": "https://physics.transductive.science/analysis/identifiability/",
+      "title": "One trajectory is not a physical law",
+      "topic": "<section><h2>The inverse problem</h2><p>Suppose a camera measures projected coordinates <code>y(t) = P(x(t))</code>, where <code>x(t)</code> is an unobserved three-dimensional state and <code>P</code> is a projection with occlusion and sampling. We seek a physical model <code>dx/dt = f(x,u; θ)</code> that reproduces the observed series. Fitting the observations does not uniquely determine <code>f</code> or its parameters <code>θ</code>.</p><p>Two different mechanisms may generate the same recorded trajectory under one setting of the controls <code>u</code>. One program might physically simulate a bouncing ball; another might simply prescribe its position frame by frame. Their videos coincide, but their responses to a shifted release diverge.</p></section>\n<section><h2>The experiment as a separator</h2><p>Write two candidate predictions <code>y₁(t | u)</code> and <code>y₂(t | u)</code>. Instead of collecting more frames of the same trajectory, choose a safe intervention <code>u*</code> that makes their predictions differ by more than the sensor's uncertainty.</p><div class=\"note\"><b>Illustrative design criterion</b><p><code>u* = argmaxᵤ Σₜ [ y₁(t | u) − y₂(t | u) ]² / σ²(t)</code></p><p>This is a simple disagreement-over-noise objective, not a statistical guarantee. A full design should account for correlated errors, nuisance parameters, interventions' safety and model misspecification.</p></div></section>\n<section><h2>Examples</h2><ol><li><strong>Table support:</strong> shift a rolling object past the table edge. A finite-table model predicts loss of support; an infinite hidden plane does not.</li><li><strong>Contact ownership:</strong> move a piece into a target obstacle. Real contact should change its trajectory; a missing collision body leaves the motion unchanged.</li><li><strong>Damping:</strong> repeat a pendulum oscillation with different amplitudes. Linear, quadratic and dry-friction models generally predict different amplitude-decay patterns.</li><li><strong>Coupling:</strong> alter a hinge, anchor or spring; models with physically active constraints respond, while keyframed motion may continue unaffected.</li></ol></section>\n<section><h2>Epistemic consequence</h2><p>A good fit to one video warrants the limited conclusion that a model can <em>reproduce those observations</em>. Predictive generalization under deliberately chosen interventions supports a stronger claim of mechanism adequacy. It still does not prove uniqueness or eliminate every untested alternative.</p><a class=\"readmore\" href=\"/experiments/smartphone-kinematics/\">Turn this principle into low-cost measured experiments →</a></section>"
+    },
+    {
+      "url": "https://physics.transductive.science/analysis/verifier-audit/",
+      "title": "Who verifies the verifier?",
+      "topic": "<section><h2>Three epistemic layers</h2><ol><li><strong>Measured state:</strong> coordinates, mesh intersections, energy traces, frame timings and collision distances directly obtained from the submitted program.</li><li><strong>Interpretive criterion:</strong> task-specific physical rubrics say which numerical values are admissible, with what tolerances or controls.</li><li><strong>Verdict:</strong> a tool-assisted verification agent evaluates criteria, combines rubric outcomes and produces a physical-validity score.</li></ol><p>The numerical witness and the score are not interchangeable. A measured overlap is reproducible only with the same geometry and units; whether it violates the intended criterion depends on the benchmark's actual task contract.</p></section>\n<section><h2>Implemented evidence gates</h2><p>The repository documents disposable preparation of an unchanged submitted scene across 240 frames, preservation of program and input identities, and a finite-state numerical-admission gate. Source flags, script exit status or unsupported claims do not automatically earn a positive score. For the 43 counterfactual cases, ordinary and intervention criteria each receive 50 points before failure caps are applied.</p><p>Unknown or technically unavailable checks are represented as score intervals or explicit gaps, rather than being silently turned into passes.</p></section>\n<section><h2>Where the uncertainty remains</h2><p>Physical-validity verdicts depend in part on an LLM-based verification agent and authored semantic rubrics. The paper describes manual defect injection but does not provide a comprehensive blinded accuracy evaluation of the verifier. An <a href=\"https://pith.science/paper/2610.17288\">AI-generated Pith review</a> independently <em>argues</em> this is a load-bearing limitation; that review is not itself a controlled reproduction.</p></section>\n<section><h2>An audit that could settle the concern</h2><ol><li>Create a held-out corpus of validated scenes, deliberately injected failures and ambiguous boundary cases.</li><li>Pre-register what counts as a true positive, false positive and indeterminate verdict.</li><li>Estimate precision, recall and calibration for each failure family, not only a single aggregate.</li><li>Run independent deterministic cross-checks for energy, geometry and collision witnesses.</li><li>Measure inter-run and inter-model judge variability on identical frozen bundles.</li><li>Publish source hashes and minimal witness scenes so that third parties can check them without the original model provider.</li></ol></section><section><h2>A useful stronger claim</h2><p>PhysCodeGym offers an unusually inspectable way to <em>challenge</em> physics-generating agents. Its numerical witnesses merit investigation. A verifier with a published error model would turn that into more robust quantitative evidence about how frequently agents produce invalid mechanisms.</p></section>"
+    },
+    {
+      "url": "https://physics.transductive.science/analysis/reproducibility/",
+      "title": "Reproducing a physical-validity witness",
+      "topic": "<section><h2>Reproduce one case before 156</h2><p>The source release includes a Python 3.12 CLI, code-level tests, a 156-case manifest and verifiers built around Blender and Harbor. A standard reference has 240 frames at 30 FPS; the full reference collection is about 1.52 GB. A benchmark task allows a three-hour agent budget and 20 shared Blender launches. These are protocol settings, not estimates of what a local run will cost.</p><div class=\"note\"><b>Execution status</b><p>This site documents a replication procedure; it does not claim that the original benchmark or the energy, geometry and counterfactual witnesses have been independently re-run.</p></div></section>\n<section><h2>Minimal metadata-first reproduction</h2><pre class=\"command-block\"><code>git clone https://github.com/ShaoShuai0605/PhysCodeGym.git\ncd PhysCodeGym\npython3.12 -m venv .venv\n. .venv/bin/activate\npip install -e '.[dev]'\nphyscodegym validate\npytest tests</code></pre><p>These commands validate task definitions and tests without model credentials or reference videos. For physical replays, pin the exact code and Blender revision, acquire task input clips, and preserve SHA-256 hashes.</p></section>\n<section><h2>One-case reference installation</h2><pre class=\"command-block\"><code>pip install huggingface_hub\nhf download ShaoShuai0605/PhysCodeGym --repo-type dataset   --include 'videos/**' --local-dir data/physcodegym\nphyscodegym install-data --references data/physcodegym/videos   --case newgap_ball_rolls_in_tray --output data/pilot\nphyscodegym build-tasks --cases data/pilot --output runs/pilot-tasks</code></pre><p>Requesting the full <code>videos/**</code> collection downloads the complete reference set, not just the single case; for storage-limited environments use a more selective download path that includes the chosen clip and required dataset metadata. The displayed command mirrors the authors' documented installation semantics.</p></section>\n<section><h2>Evidence for a publishable anomaly</h2><p>Preserve the executable candidate program, resolved scene and dependencies, exact input hash, Blender/solver version, an unchanged 240-frame trace, measurement scripts, counterfactual branch definitions, and an independent control. Record the first failing frame, metric definition, SI-unit conversion, numerical tolerances and any dependence on solver step count.</p><p><a href=\"/analysis/verifier-audit/\">Evaluate the validity of the verifier →</a> · <a href=\"/cases/\">Select a reference case →</a></p></section>"
+    },
+    {
+      "url": "https://physics.transductive.science/experiments/smartphone-kinematics/",
+      "title": "A smartphone laboratory for discriminating models",
+      "topic": "<section><h2>From synthetic failures to measured phenomena</h2><p>PhysCodeGym exposes invalid code-generated worlds. To discover physical discrepancies in reality, substitute a real apparatus, a calibrated smartphone camera, repeatable interventions and an independent measurement channel. The goal is not to make a video look unusual. The goal is to force different proposed mechanisms to make observably different predictions.</p></section>\n<section><h2>Protocol A · Rolling dynamics</h2><p><strong>Apparatus:</strong> a track or tray, two visibly distinguishable rolling objects, high-contrast position marks, a stable phone, a ruler in the same plane, and a controlled release.</p><ol><li>Fix the camera and record a calibration grid or ruler in the experiment plane.</li><li>Film multiple runs from varied release heights; where supported, lock exposure, focus and frame timing.</li><li>Track translational centre and, using marked surface features, rotational angle.</li><li>Compare pure rolling, kinetic slipping and speed-dependent drag models.</li><li>Use a held-out surface or incline to test the models' distinct predictions.</li></ol><p><strong>Confounders:</strong> lens distortion, parallax, rolling shutter, auto-exposure, uncertain release motion and contact-dependent friction.</p></section>\n<section><h2>Protocol B · Pendulum damping</h2><p><strong>Apparatus:</strong> suspended bob, fixed pivot, visible scale, smartphone tripod and controlled release. Film at multiple starting angles using the same camera pose and measure successive peak amplitudes.</p><p>Fit competing differential equations, such as <code>θ″ + 2βθ′ + (g/L)sin θ = 0</code> versus a model adding a quadratic speed term. Do not treat a better in-sample fit as confirmation. Predict a new amplitude and a new bob configuration before filming.</p><p><strong>Confounders:</strong> pivot friction, rope flexibility, air movement, two-plane motion, imperfect measurement of L and shutter timing.</p></section>\n<section><h2>Protocol C · Resonance and hysteresis</h2><p>Record a weakly driven mechanical oscillator with a smartphone microphone or accelerometer and a programmable, limited-amplitude drive. Repeat frequency sweeps in both directions. Compare linear response against a nonlinear model; check whether any hysteresis survives changes in drive level and sensor calibration.</p><p>Keep excitation within safe limits, avoid operating machinery and document all raw signals. A microphone cannot directly provide force without a calibrated transfer function.</p></section>\n<section><h2>Pre-registration and evidence capture</h2><p>For every hypothesis, publish <strong>predicted curves, unit conversions, held-out conditions, uncertainty, null controls and all runs including failures</strong>. Record the original media files, frame timestamps, calibration images and immutable hashes. If the models disagree only below sensor noise, redesign the experiment rather than proclaiming an anomaly.</p><p>These three procedures are new <em>proposals</em>, not experiments already executed or anomalies already measured.</p><a class=\"readmore\" href=\"/analysis/identifiability/\">The mathematical reason to intervene →</a></section>"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/newgap_ball_rolls_in_tray/",
+      "title": "Newgap ball rolls in tray",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/newgap_basketball_rolls_to_wheelchair/",
+      "title": "Newgap basketball rolls to wheelchair",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/newgap_billiard_black_table/",
+      "title": "Newgap billiard black table",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/newgap_billiards_cue_strike/",
+      "title": "Newgap billiards cue strike",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/newgap_blueberries_bounce_closeup/",
+      "title": "Newgap blueberries bounce closeup",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/newgap_bowling_strikes_pins/",
+      "title": "Newgap bowling strikes pins",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/newgap_capsules_fall/",
+      "title": "Newgap capsules fall",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/newgap_cherries_wet_surface/",
+      "title": "Newgap cherries wet surface",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/newgap_eggs_on_blue/",
+      "title": "Newgap eggs on blue",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/newgap_feather_falls/",
+      "title": "Newgap feather falls",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/newgap_lemon_slice_falls/",
+      "title": "Newgap lemon slice falls",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/newgap_marbles_into_drawer/",
+      "title": "Newgap marbles into drawer",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/newgap_pingpong_chute_bounce/",
+      "title": "Newgap pingpong chute bounce",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/newgap_snooker_into_pocket/",
+      "title": "Newgap snooker into pocket",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/newgap_wooden_piece_rolls/",
+      "title": "Newgap wooden piece rolls",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/pexels_wind_0001_banners_three_tall/",
+      "title": "Pexels wind 0001 banners three tall",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/pexels_wind_0003_flag_ukraine_single/",
+      "title": "Pexels wind 0003 flag ukraine single",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/pexels_wind_0007_daisies_in_field/",
+      "title": "Pexels wind 0007 daisies in field",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/pexels_wind_0008_flag_usa_on_white_pole/",
+      "title": "Pexels wind 0008 flag usa on white pole",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/pexels_wind_0010_poppy_close_up/",
+      "title": "Pexels wind 0010 poppy close up",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/pexels_wind_0013_flag_australia_grey_sky/",
+      "title": "Pexels wind 0013 flag australia grey sky",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/pexels_wind_0014_coreopsis_three_blooms/",
+      "title": "Pexels wind 0014 coreopsis three blooms",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/pexels_wind_0015_flags_four_in_row/",
+      "title": "Pexels wind 0015 flags four in row",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/pexels_wind_0019_single_poppy_stem/",
+      "title": "Pexels wind 0019 single poppy stem",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physbench_02_L2_0008_marble_run_x_center/",
+      "title": "Physbench 02 l2 0008 marble run x center",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physbench_02_L2_0009_marble_run_x_right/",
+      "title": "Physbench 02 l2 0009 marble run x right",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physbench_02_L2_0010_marble_run_y_left/",
+      "title": "Physbench 02 l2 0010 marble run y left",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physbench_03_L2_0001_playground_swing/",
+      "title": "Physbench 03 l2 0001 playground swing",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physbench_03_L2_0002_wind_chimes/",
+      "title": "Physbench 03 l2 0002 wind chimes",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physbench_03_L2_0004_hanging_dolphin/",
+      "title": "Physbench 03 l2 0004 hanging dolphin",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physbench_03_L2_0016_turntable_vinyl/",
+      "title": "Physbench 03 l2 0016 turntable vinyl",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physbench_03_L2_0019_wind_turbine/",
+      "title": "Physbench 03 l2 0019 wind turbine",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physbench_03_L2_0024_spinning_top/",
+      "title": "Physbench 03 l2 0024 spinning top",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physbench_03_L2_0035_ball_behind_rotating_paper/",
+      "title": "Physbench 03 l2 0035 ball behind rotating paper",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physbench_03_L2_0038_newtons_cradle_double/",
+      "title": "Physbench 03 l2 0038 newtons cradle double",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physbench_03_L3_0001_spinning_wire_sculpture/",
+      "title": "Physbench 03 l3 0001 spinning wire sculpture",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0001_ball_and_block_fall/",
+      "title": "Physics iq 0001 ball and block fall",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0007_ball_hits_duck/",
+      "title": "Physics iq 0007 ball hits duck",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0013_ball_in_basket/",
+      "title": "Physics iq 0013 ball in basket",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0019_ball_ramp/",
+      "title": "Physics iq 0019 ball ramp",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0028_ball_train/",
+      "title": "Physics iq 0028 ball train",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0034_block_domino/",
+      "title": "Physics iq 0034 block domino",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0037_blow_balloon/",
+      "title": "Physics iq 0037 blow balloon",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0046_domino_in_juice/",
+      "title": "Physics iq 0046 domino in juice",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0049_dominos_with_space/",
+      "title": "Physics iq 0049 dominos with space",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0055_duck_and_dominos/",
+      "title": "Physics iq 0055 duck and dominos",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0064_fill_glass_red_drink/",
+      "title": "Physics iq 0064 fill glass red drink",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0085_liquid_on_duck/",
+      "title": "Physics iq 0085 liquid on duck",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0088_liquid_overfill/",
+      "title": "Physics iq 0088 liquid overfill",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0142_potato_in_water/",
+      "title": "Physics iq 0142 potato in water",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0157_silk_cover/",
+      "title": "Physics iq 0157 silk cover",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0160_single_cradle/",
+      "title": "Physics iq 0160 single cradle",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0166_smiley_ball_rotates/",
+      "title": "Physics iq 0166 smiley ball rotates",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0172_stable_blocks/",
+      "title": "Physics iq 0172 stable blocks",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0175_teapot_rotates/",
+      "title": "Physics iq 0175 teapot rotates",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0181_unstable_block_stack/",
+      "title": "Physics iq 0181 unstable block stack",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0187_weight_on_ceramic/",
+      "title": "Physics iq 0187 weight on ceramic",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/physics_iq_0193_weight_on_pillow/",
+      "title": "Physics iq 0193 weight on pillow",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r2_avocado_halves_into_water/",
+      "title": "R2 avocado halves into water",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r2_beach_rope_swing/",
+      "title": "R2 beach rope swing",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r2_garden_hose_jet/",
+      "title": "R2 garden hose jet",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r2_hammock_grey_swings/",
+      "title": "R2 hammock grey swings",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r2_hammock_yellow_sways/",
+      "title": "R2 hammock yellow sways",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r2_iris_pendulum_45deg/",
+      "title": "R2 iris pendulum 45deg",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r2_iris_two_pendulums_45deg/",
+      "title": "R2 iris two pendulums 45deg",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r2_metronome_ticks/",
+      "title": "R2 metronome ticks",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r2_milk_fills_glass/",
+      "title": "R2 milk fills glass",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r2_pipe_fills_bucket/",
+      "title": "R2 pipe fills bucket",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r2_red_liquid_splash_surface/",
+      "title": "R2 red liquid splash surface",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r2_stone_spout_gush/",
+      "title": "R2 stone spout gush",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r2_strawberry_splash_glass/",
+      "title": "R2 strawberry splash glass",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_10325105_toy_train_driving_on_track/",
+      "title": "R3 nc 10325105 toy train driving on track",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_10517398_liquid/",
+      "title": "R3 nc 10517398 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_13456224_rotation/",
+      "title": "R3 nc 13456224 rotation",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_1793534_rotation/",
+      "title": "R3 nc 1793534 rotation",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_18513092_liquid/",
+      "title": "R3 nc 18513092 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_18513093_liquid/",
+      "title": "R3 nc 18513093 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_20068727_static_control/",
+      "title": "R3 nc 20068727 static control",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_27938940_liquid/",
+      "title": "R3 nc 27938940 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_3116510_rotation/",
+      "title": "R3 nc 3116510 rotation",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_3188895_liquid/",
+      "title": "R3 nc 3188895 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_32625862_rotation/",
+      "title": "R3 nc 32625862 rotation",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_33795289_rotation/",
+      "title": "R3 nc 33795289 rotation",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_36200038_liquid/",
+      "title": "R3 nc 36200038 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_3704910_liquid/",
+      "title": "R3 nc 3704910 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_37443196_liquid/",
+      "title": "R3 nc 37443196 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_37634292_rotation/",
+      "title": "R3 nc 37634292 rotation",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_4513019_roll/",
+      "title": "R3 nc 4513019 roll",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_4796945_liquid/",
+      "title": "R3 nc 4796945 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_4957763_liquid/",
+      "title": "R3 nc 4957763 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_5278105_liquid/",
+      "title": "R3 nc 5278105 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_6289658_liquid/",
+      "title": "R3 nc 6289658 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_6474084_liquid/",
+      "title": "R3 nc 6474084 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_6541467_projectile/",
+      "title": "R3 nc 6541467 projectile",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_6609498_constraint/",
+      "title": "R3 nc 6609498 constraint",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_6613341_constraint/",
+      "title": "R3 nc 6613341 constraint",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_6637242_liquid/",
+      "title": "R3 nc 6637242 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_6661928_liquid/",
+      "title": "R3 nc 6661928 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_7293935_a_basketball_floating_in_the_swimming_po/",
+      "title": "R3 nc 7293935 a basketball floating in the swimming po",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_7320537_playground/",
+      "title": "R3 nc 7320537 playground",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_7458243_liquid/",
+      "title": "R3 nc 7458243 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_7461479_rotation/",
+      "title": "R3 nc 7461479 rotation",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_7777214_rotation/",
+      "title": "R3 nc 7777214 rotation",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_8093172_liquid/",
+      "title": "R3 nc 8093172 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_855185_liquid/",
+      "title": "R3 nc 855185 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_855391_liquid/",
+      "title": "R3 nc 855391 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_855859_driven_kinematic/",
+      "title": "R3 nc 855859 driven kinematic",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_a00238_track/",
+      "title": "R3 nc a00238 track",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_nc_a00761_track/",
+      "title": "R3 nc a00761 track",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_01_l1_0003_collision/",
+      "title": "R3 pb 01 l1 0003 collision",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_02_l1_0001_projectile/",
+      "title": "R3 pb 02 l1 0001 projectile",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_02_l1_0003_drop/",
+      "title": "R3 pb 02 l1 0003 drop",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_02_l1_0004_roll/",
+      "title": "R3 pb 02 l1 0004 roll",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_02_l1_0007_roll/",
+      "title": "R3 pb 02 l1 0007 roll",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_02_l1_0008_roll/",
+      "title": "R3 pb 02 l1 0008 roll",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_02_l2_0001_drop/",
+      "title": "R3 pb 02 l2 0001 drop",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_03_l2_0003_constraint/",
+      "title": "R3 pb 03 l2 0003 constraint",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_03_l2_0007_constraint/",
+      "title": "R3 pb 03 l2 0007 constraint",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_03_l2_0009_constraint/",
+      "title": "R3 pb 03 l2 0009 constraint",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_03_l2_0011_constraint/",
+      "title": "R3 pb 03 l2 0011 constraint",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_03_l2_0012_constraint/",
+      "title": "R3 pb 03 l2 0012 constraint",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_03_l2_0013_constraint/",
+      "title": "R3 pb 03 l2 0013 constraint",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_03_l2_0021_rotation/",
+      "title": "R3 pb 03 l2 0021 rotation",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_03_l2_0023_rotation/",
+      "title": "R3 pb 03 l2 0023 rotation",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_03_l2_0028_rotation/",
+      "title": "R3 pb 03 l2 0028 rotation",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_03_l2_0031_rotation/",
+      "title": "R3 pb 03 l2 0031 rotation",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_03_l2_0033_rotation/",
+      "title": "R3 pb 03 l2 0033 rotation",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_04_l2_0004_liquid/",
+      "title": "R3 pb 04 l2 0004 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_04_l2_0006_liquid/",
+      "title": "R3 pb 04 l2 0006 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_04_l2_0008_liquid/",
+      "title": "R3 pb 04 l2 0008 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_04_l3_0002_liquid/",
+      "title": "R3 pb 04 l3 0002 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_04_l3_0005_liquid/",
+      "title": "R3 pb 04 l3 0005 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_04_l3_0006_liquid/",
+      "title": "R3 pb 04 l3 0006 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_04_l3_0007_liquid/",
+      "title": "R3 pb 04 l3 0007 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_04_l3_0008_liquid/",
+      "title": "R3 pb 04 l3 0008 liquid",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_05_l2_0004_cloth/",
+      "title": "R3 pb 05 l2 0004 cloth",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_05_l2_0006_cloth/",
+      "title": "R3 pb 05 l2 0006 cloth",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_05_l2_0007_cloth/",
+      "title": "R3 pb 05 l2 0007 cloth",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_05_l2_0016_cloth/",
+      "title": "R3 pb 05 l2 0016 cloth",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_05_l2_0017_cloth/",
+      "title": "R3 pb 05 l2 0017 cloth",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_05_l2_0020_cloth/",
+      "title": "R3 pb 05 l2 0020 cloth",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pb_05_l3_0008_cloth/",
+      "title": "R3 pb 05 l3 0008 cloth",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pv3_29653511_drop/",
+      "title": "R3 pv3 29653511 drop",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pv3_35824443_drop/",
+      "title": "R3 pv3 35824443 drop",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pv3_4211313_drop/",
+      "title": "R3 pv3 4211313 drop",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pv3_5419514_drop/",
+      "title": "R3 pv3 5419514 drop",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pv3_5868918_drop/",
+      "title": "R3 pv3 5868918 drop",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pv3_5868925_roll/",
+      "title": "R3 pv3 5868925 roll",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pv3_6177009_drop/",
+      "title": "R3 pv3 6177009 drop",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pv3_6365274_drop/",
+      "title": "R3 pv3 6365274 drop",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pv3_6365288_drop/",
+      "title": "R3 pv3 6365288 drop",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pv3_6365313_drop/",
+      "title": "R3 pv3 6365313 drop",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pv3_6596331_drop/",
+      "title": "R3 pv3 6596331 drop",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pv3_6834813_drop/",
+      "title": "R3 pv3 6834813 drop",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pv3_7829726_drop/",
+      "title": "R3 pv3 7829726 drop",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/cases/r3_pv3_8035620_drop/",
+      "title": "R3 pv3 8035620 drop",
+      "topic": "Reference case / Original benchmark metadata"
+    },
+    {
+      "url": "https://physics.transductive.science/tools/hash-verifier/",
+      "title": "Local SHA-256 reference-video verifier",
+      "topic": "Tool / Exact benchmark reference verification"
+    }
+  ]
+}

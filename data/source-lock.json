@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/ShaoShuai0605/PhysCodeGym",
+  "commit_sha": "de1c8b75cddff0054f77b6322a979759e7a01f81",
+  "manifest_path": "benchmark/manifest.json",
+  "sha256": "4d5107f5080f29871367ea783b95b37e8b1f17e700254b7b7b1be32ca5b520c7",
+  "snapshot_date": "2026-11-08",
+  "benchmark_cases": 156,
+  "counterfactual_cases": 43,
+  "kind": "authors-public-benchmark-metadata",
+  "replication_status": "metadata independently parsed, physical candidate measurements not rerun"
+}
